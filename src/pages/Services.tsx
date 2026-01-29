@@ -1,16 +1,14 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import SuccessSection from "@/components/SuccessSection";
+import ServicesSection from "@/components/ServicesSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const Services = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
-        <HeroSection />
-        <SuccessSection />
+      <main className="pt-20">
+        <ServicesSection />
         <CTASection />
       </main>
       <Footer />
@@ -18,4 +16,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Services;

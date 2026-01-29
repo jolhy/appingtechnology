@@ -1,24 +1,25 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
+import appingLogo from "@/assets/apping-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
-      { label: "AI Content Creation", href: "#services" },
-      { label: "Social Media Management", href: "#services" },
-      { label: "ERP Solutions", href: "#services" },
-      { label: "Digital Transformation", href: "#services" },
+      { label: "AI Content Creation", href: "/services" },
+      { label: "Social Media Management", href: "/services" },
+      { label: "ERP Solutions", href: "/services" },
+      { label: "Digital Transformation", href: "/services" },
     ],
     company: [
-      { label: "About Us", href: "#" },
-      { label: "Our Team", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Contact", href: "#" },
+      { label: "About Us", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Contact", href: "/contact" },
     ],
     resources: [
       { label: "Blog", href: "#" },
-      { label: "Case Studies", href: "#success" },
+      { label: "Case Studies", href: "#" },
       { label: "FAQs", href: "#" },
       { label: "Privacy Policy", href: "#" },
     ],
@@ -30,12 +31,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-9 h-9 rounded-lg gradient-hero flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">A</span>
-              </div>
+            <Link to="/" className="flex items-center gap-2 mb-6">
+              <img src={appingLogo} alt="Apping" className="h-10 w-auto brightness-0 invert" />
               <span className="font-bold text-xl text-background">Apping</span>
-            </div>
+            </Link>
             <p className="text-background/70 mb-6 max-w-sm leading-relaxed">
               Your growth partner in AI-powered marketing and digital transformation. Helping SMEs succeed with smart, accessible technology.
             </p>
@@ -70,12 +69,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-background/60 hover:text-background transition-colors text-sm"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -87,12 +86,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-background/60 hover:text-background transition-colors text-sm"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
