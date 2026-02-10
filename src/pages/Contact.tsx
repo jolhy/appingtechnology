@@ -6,6 +6,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
+import ScrollReveal from "@/components/motion/ScrollReveal";
+import FloatingElement from "@/components/motion/FloatingElement";
+import ParticleField from "@/components/motion/ParticleField";
 
 const contactInfo = [
   {
@@ -66,20 +70,21 @@ const Contact = () => {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 md:py-28 gradient-hero-light relative overflow-hidden">
-          <div className="absolute top-10 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+          <ParticleField count={15} />
+          <FloatingElement className="absolute top-10 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" duration={8} />
+          <FloatingElement className="absolute bottom-10 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" duration={10} delay={2} />
           
           <div className="container relative">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">
                 Contact Us
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              </motion.p>
+              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Let's <span className="text-gradient-hero">Grow Together</span>
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Ready to transform your marketing? Have questions about our services? We'd love to hear from you. Reach out and let's start the conversation.
-              </p>
+              </motion.h1>
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Ready to transform your marketing? We'd love to hear from you.
+              </motion.p>
             </div>
           </div>
         </section>
@@ -89,7 +94,7 @@ const Contact = () => {
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
               {/* Contact Form */}
-              <div>
+              <ScrollReveal direction="left">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                   Send Us a Message
                 </h2>
@@ -171,7 +176,7 @@ const Contact = () => {
                       id="message"
                       name="message"
                       required
-                      placeholder="Tell us about your project or ask us anything..."
+                      placeholder="Tell us about your project..."
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
@@ -179,15 +184,17 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" variant="hero" size="xl" disabled={isSubmitting} className="w-full sm:w-auto">
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                    <Send size={20} />
-                  </Button>
+                  <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                    <Button type="submit" variant="hero" size="xl" disabled={isSubmitting} className="w-full sm:w-auto">
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                      <Send size={20} />
+                    </Button>
+                  </motion.div>
                 </form>
-              </div>
+              </ScrollReveal>
 
               {/* Contact Info */}
-              <div>
+              <ScrollReveal direction="right">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                   Get in Touch
                 </h2>
@@ -196,31 +203,47 @@ const Contact = () => {
                 </p>
 
                 <div className="space-y-6 mb-12">
-                  {contactInfo.map((item) => (
-                    <a
+                  {contactInfo.map((item, index) => (
+                    <motion.a
                       key={item.label}
                       href={item.href}
-                      className="flex items-start gap-4 p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group"
+                      className="flex items-start gap-4 p-5 rounded-xl bg-card border border-border transition-colors duration-300 group block"
+                      initial={{ opacity: 0, x: 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1, duration: 0.5 }}
+                      whileHover={{ y: -4, borderColor: "hsl(240 65% 50% / 0.3)" }}
                     >
-                      <div className="w-12 h-12 rounded-lg gradient-hero flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <motion.div
+                        className="w-12 h-12 rounded-lg gradient-hero flex items-center justify-center flex-shrink-0"
+                        whileHover={{ scale: 1.15, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 400 }}
+                      >
                         <item.icon size={24} className="text-primary-foreground" />
-                      </div>
+                      </motion.div>
                       <div>
                         <p className="font-semibold text-foreground mb-1">{item.label}</p>
                         <p className="text-muted-foreground">{item.value}</p>
                       </div>
-                    </a>
+                    </motion.a>
                   ))}
                 </div>
 
                 {/* Map placeholder */}
-                <div className="rounded-2xl overflow-hidden border border-border bg-muted h-64 flex items-center justify-center">
+                <motion.div
+                  className="rounded-2xl overflow-hidden border border-border bg-muted h-64 flex items-center justify-center"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                >
                   <div className="text-center text-muted-foreground">
-                    <MapPin size={48} className="mx-auto mb-3 opacity-50" />
+                    <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
+                      <MapPin size={48} className="mx-auto mb-3 opacity-50" />
+                    </motion.div>
                     <p>Interactive map coming soon</p>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -228,17 +251,19 @@ const Contact = () => {
         {/* FAQ Teaser */}
         <section className="py-16 md:py-20 gradient-hero-light">
           <div className="container">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Have Questions?
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6">
-                Our team typically responds within 24 hours. For urgent matters, give us a call during business hours.
-              </p>
-              <p className="text-primary font-medium">
-                We're here to help you succeed.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Have Questions?
+                </h2>
+                <p className="text-muted-foreground text-lg mb-6">
+                  Our team typically responds within 24 hours.
+                </p>
+                <p className="text-primary font-medium">
+                  We're here to help you succeed.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       </main>
