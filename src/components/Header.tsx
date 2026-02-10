@@ -22,24 +22,22 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
-      <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <img src={appingLogo} alt="Apping" className="h-10 w-auto" />
-          <span className="font-bold text-xl text-gradient-hero">Apping</span>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/40">
+      <div className="container flex items-center justify-between h-16 md:h-[72px]">
+        <Link to="/" className="flex items-center gap-2.5">
+          <img src={appingLogo} alt="Apping" className="h-9 w-auto" />
+          <span className="font-serif text-xl text-foreground">Apping</span>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               to={link.href}
-              className={`transition-colors duration-200 text-sm font-medium ${
+              className={`transition-colors duration-200 text-[15px] font-medium ${
                 isActive(link.href)
                   ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-foreground/70 hover:text-foreground"
               }`}
             >
               {link.label}
@@ -47,14 +45,12 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* CTA Button */}
-        <div className="hidden md:flex items-center gap-4">
-          <Button variant="hero" size="default" asChild>
-            <Link to="/contact">Get Started</Link>
+        <div className="hidden md:flex items-center gap-3">
+          <Button variant="default" size="default" asChild className="rounded-full px-6">
+            <Link to="/contact">Get A Demo</Link>
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2 text-foreground"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -64,7 +60,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-medium animate-fade-in">
           <nav className="container py-6 flex flex-col gap-4">
@@ -73,18 +68,16 @@ const Header = () => {
                 key={link.label}
                 to={link.href}
                 className={`transition-colors duration-200 text-base font-medium py-2 ${
-                  isActive(link.href)
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                  isActive(link.href) ? "text-primary" : "text-foreground hover:text-primary"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Button variant="hero" size="lg" className="mt-4" asChild>
+            <Button variant="default" size="lg" className="mt-4 rounded-full" asChild>
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                Get Started
+                Get A Demo
               </Link>
             </Button>
           </nav>
