@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import AnimatedCounter from "./motion/AnimatedCounter";
 
 const benefits = [
-  "AI-powered ad creation",
-  "Social media management",
-  "Monthly strategy meetings",
-  "ERP & digital transformation",
+  "AI-powered process automation",
+  "Skilled talent outsourcing",
+  "End-to-end operations support",
+  "Scalable & cost-effective",
 ];
 
 const HeroSection = () => {
@@ -16,13 +16,11 @@ const HeroSection = () => {
     <section className="relative pt-32 pb-24 md:pt-44 md:pb-36 overflow-hidden">
       <div className="absolute inset-0 bg-background" />
       
-      {/* Subtle warm gradient accent */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/[0.04] rounded-full blur-[120px] -translate-y-1/3 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
       
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,32 +28,29 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-8"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-soft" />
-            AI-Powered Marketing for Growing Businesses
+            Business Process Outsourcing — AI & Talent
           </motion.div>
 
-          {/* Main Headline - Jasper-style large serif */}
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6"
           >
-            Put AI to work
+            Outsource smarter
             <br />
-            <span className="text-primary">for your marketing</span>
+            <span className="text-primary">with AI & talent</span>
           </motion.h1>
 
-          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            We create high-quality AI-generated ads, manage your social media, and meet with you monthly to review performance — so you can focus on growing your business.
+            Apping Technology helps businesses outsource their processes — through AI automation or skilled professionals. Marketing, operations, helpdesk, accounting, HR, sales, and more.
           </motion.p>
 
-          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,7 +68,6 @@ const HeroSection = () => {
             </Button>
           </motion.div>
 
-          {/* Trust stats */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -81,9 +75,9 @@ const HeroSection = () => {
             className="flex flex-wrap items-center justify-center gap-10 md:gap-16 mb-20"
           >
             {[
-              { value: 200, suffix: "+", label: "Happy Clients" },
-              { value: 3, suffix: "x", label: "Average ROI" },
-              { value: 10, suffix: "K+", label: "Ads Created" },
+              { value: 200, suffix: "+", label: "Clients Served" },
+              { value: 50, suffix: "%", label: "Avg. Cost Savings" },
+              { value: 500, suffix: "+", label: "Professionals Deployed" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-3xl md:text-4xl font-serif text-foreground">
@@ -95,7 +89,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Why Apping — clean grid */}
         <div className="border-t border-border/60 pt-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -104,10 +97,10 @@ const HeroSection = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl text-foreground mb-3">
-              Why businesses choose Apping
+              Why businesses choose Apping Technology
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Your growth partner, not just a vendor.
+              Your outsourcing partner — powered by AI and world-class talent.
             </p>
           </motion.div>
           

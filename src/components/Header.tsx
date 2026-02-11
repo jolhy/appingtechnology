@@ -26,7 +26,7 @@ const Header = () => {
       <div className="container flex items-center justify-between h-16 md:h-[72px]">
         <Link to="/" className="flex items-center gap-2.5">
           <img src={appingLogo} alt="Apping" className="h-9 w-auto" />
-          <span className="font-serif text-xl text-foreground">Apping</span>
+          <span className="font-serif text-xl text-foreground">Apping Technology</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

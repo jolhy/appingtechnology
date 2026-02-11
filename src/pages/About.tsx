@@ -8,17 +8,17 @@ import appingLogo from "@/assets/apping-logo.png";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const values = [
-  { icon: Target, title: "Results-Driven", description: "Every strategy is focused on delivering measurable results for your business." },
-  { icon: Users, title: "Partnership First", description: "We're an extension of your team, invested in your success." },
-  { icon: Lightbulb, title: "Innovation", description: "Cutting-edge AI that makes enterprise marketing accessible to everyone." },
-  { icon: Award, title: "Excellence", description: "Professional content that represents your brand with pride." },
+  { icon: Target, title: "Results-Driven", description: "Every solution is designed to deliver measurable operational improvements." },
+  { icon: Users, title: "Partnership First", description: "We embed into your team as an extension, not just a vendor." },
+  { icon: Lightbulb, title: "Innovation", description: "Combining cutting-edge AI with expert human talent for maximum impact." },
+  { icon: Award, title: "Excellence", description: "Rigorous quality standards for every process we manage." },
 ];
 
 const team = [
-  { name: "Alex Chen", role: "CEO & Founder", bio: "15+ years in digital marketing and AI innovation." },
-  { name: "Sarah Miller", role: "Head of AI", bio: "Former ML engineer at leading tech companies." },
-  { name: "James Wilson", role: "Client Success", bio: "Passionate about helping SMEs achieve their goals." },
-  { name: "Maria Santos", role: "Creative Director", bio: "Award-winning designer with a keen eye for brands." },
+  { name: "Alex Chen", role: "CEO & Founder", bio: "15+ years in BPO, digital transformation, and AI innovation." },
+  { name: "Sarah Miller", role: "Head of AI", bio: "Former ML engineer building intelligent automation solutions." },
+  { name: "James Wilson", role: "Head of Talent", bio: "Expert in building and managing high-performing outsourced teams." },
+  { name: "Maria Santos", role: "Operations Director", bio: "Streamlining business processes for companies of all sizes." },
 ];
 
 const About = () => {
@@ -31,12 +31,12 @@ const About = () => {
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] -translate-y-1/3" />
           <div className="container relative">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.img src={appingLogo} alt="Apping" className="h-20 w-auto mx-auto mb-8" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} />
+              <motion.img src={appingLogo} alt="Apping Technology" className="h-20 w-auto mx-auto mb-8" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} />
               <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="text-5xl md:text-6xl text-foreground mb-6">
-                About <span className="text-primary">Apping</span>
+                About <span className="text-primary">Apping Technology</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                We believe every growing business deserves powerful marketing. Our mission is to make AI-driven marketing accessible, affordable, and effective.
+                We help businesses outsource their processes — using AI automation and skilled professionals — so they can focus on what matters most: growing.
               </motion.p>
             </div>
           </div>
@@ -49,15 +49,15 @@ const About = () => {
               <ScrollReveal>
                 <div className="text-center mb-12">
                   <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Our Story</p>
-                  <h2 className="text-4xl md:text-5xl text-foreground mb-6">Empowering growth through technology</h2>
+                  <h2 className="text-4xl md:text-5xl text-foreground mb-6">Outsourcing, reimagined</h2>
                 </div>
               </ScrollReveal>
               <div className="space-y-6 text-muted-foreground text-[17px] leading-relaxed">
                 {[
-                  "Apping Technology was founded with a simple observation: small and medium businesses often struggle to compete when it comes to marketing. Agencies are expensive, tools are complex, and the time investment is massive.",
-                  "By harnessing AI, we create professional-quality marketing content at a fraction of the traditional cost. But technology alone isn't enough — businesses need a partner who understands their challenges.",
-                  "That's why we combine cutting-edge AI with genuine human partnership. Monthly strategy meetings ensure we're always aligned with your vision, adapting as your business grows.",
-                  "Today, we serve hundreds of businesses across industries, helping them reach new customers and achieve sustainable growth.",
+                  "Apping Technology was founded with a clear mission: make business process outsourcing smarter, faster, and more accessible. Too many companies struggle with the cost and complexity of scaling their teams and operations.",
+                  "We saw an opportunity to combine two powerful approaches — AI automation for repetitive, data-driven tasks, and skilled human professionals for work that requires judgment, creativity, and personal touch.",
+                  "Whether it's marketing, operations, customer support, accounting, HR, onboarding, or sales — we help businesses outsource any process through AI, talent, or a hybrid of both.",
+                  "Today, Apping Technology serves hundreds of businesses across industries, deploying over 500 professionals and AI systems that save clients an average of 50% in operational costs.",
                 ].map((text, i) => (
                   <ScrollReveal key={i} delay={i * 0.08}><p>{text}</p></ScrollReveal>
                 ))}
@@ -97,16 +97,13 @@ const About = () => {
             <ScrollReveal>
               <div className="text-center mb-16">
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Our Team</p>
-                <h2 className="text-4xl md:text-5xl text-foreground mb-4">Meet the people behind Apping</h2>
+                <h2 className="text-4xl md:text-5xl text-foreground mb-4">Meet the people behind Apping Technology</h2>
               </div>
             </ScrollReveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {team.map((member, i) => (
                 <ScrollReveal key={member.name} delay={i * 0.08}>
-                  <motion.div
-                    className="text-center p-6 rounded-2xl bg-background border border-border/60"
-                    whileHover={{ y: -4 }}
-                  >
+                  <motion.div className="text-center p-6 rounded-2xl bg-background border border-border/60" whileHover={{ y: -4 }}>
                     <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
                       <span className="text-xl font-serif text-primary">
                         {member.name.split(' ').map(n => n[0]).join('')}
@@ -128,7 +125,7 @@ const About = () => {
             <ScrollReveal>
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl text-foreground mb-6">Ready to work together?</h2>
-                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">Join the hundreds of businesses growing with Apping.</p>
+                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">Join the hundreds of businesses outsourcing smarter with Apping Technology.</p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="xl" asChild className="rounded-full px-10">
                     <Link to="/contact">Get in Touch<ArrowRight size={18} /></Link>

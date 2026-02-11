@@ -4,16 +4,16 @@ import ScrollReveal from "./motion/ScrollReveal";
 import AnimatedCounter from "./motion/AnimatedCounter";
 
 const testimonials = [
-  { quote: "Apping transformed how we approach marketing. The AI-generated content looks professional, and the monthly meetings keep us on track. Our social engagement has tripled!", author: "Sarah Chen", role: "Owner, Bloom Boutique", rating: 5 },
-  { quote: "As a small business, we couldn't afford a marketing agency. Apping gave us enterprise-level marketing at a price we could actually manage. Game changer.", author: "Marcus Johnson", role: "CEO, TechFix Solutions", rating: 5 },
-  { quote: "The monthly strategy sessions are incredibly valuable. They actually listen, adapt, and bring fresh ideas. It feels like having an in-house marketing team.", author: "Lisa Martinez", role: "Director, Healthy Harvest Cafe", rating: 5 },
+  { quote: "Apping Technology handles our entire customer support with AI chatbots and a dedicated team. Response times dropped by 80% and our customers love it.", author: "Sarah Chen", role: "COO, Bloom Boutique", rating: 5 },
+  { quote: "We outsourced our accounting and HR to Apping. The combination of AI automation and skilled professionals saved us over 40% in operational costs.", author: "Marcus Johnson", role: "CEO, TechFix Solutions", rating: 5 },
+  { quote: "Their talent outsourcing for our sales team was a game changer. We scaled from 2 to 15 reps in three months without the hiring headaches.", author: "Lisa Martinez", role: "Director, Healthy Harvest Co.", rating: 5 },
 ];
 
 const stats = [
   { value: 95, suffix: "%", label: "Client Retention" },
-  { value: 40, suffix: "%", label: "Avg. Cost Savings" },
-  { value: 2.5, suffix: "x", label: "Engagement Increase" },
-  { value: 30, suffix: "", label: "Days to See Results" },
+  { value: 50, suffix: "%", label: "Avg. Cost Savings" },
+  { value: 500, suffix: "+", label: "Professionals Deployed" },
+  { value: 30, suffix: "", label: "Days to Full Deployment" },
 ];
 
 const SuccessSection = () => {
@@ -24,7 +24,7 @@ const SuccessSection = () => {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Client Success</p>
             <h2 className="text-4xl md:text-5xl text-foreground mb-5">Trusted by growing businesses</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">Don't just take our word for it — here's what our clients say.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">See how companies outsource smarter with Apping Technology.</p>
           </div>
         </ScrollReveal>
 

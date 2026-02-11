@@ -7,18 +7,18 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const perks = [
-  { icon: Rocket, title: "Growth Opportunities", description: "Learn and grow at the forefront of AI technology." },
-  { icon: Users, title: "Collaborative Culture", description: "Work with talented, supportive people." },
-  { icon: Heart, title: "Work-Life Balance", description: "Flexible schedules and remote options." },
-  { icon: Coffee, title: "Great Benefits", description: "Competitive salary and health coverage." },
+  { icon: Rocket, title: "Growth Opportunities", description: "Learn and grow at the forefront of AI and BPO." },
+  { icon: Users, title: "Collaborative Culture", description: "Work with talented, supportive people worldwide." },
+  { icon: Heart, title: "Work-Life Balance", description: "Flexible schedules and remote-first options." },
+  { icon: Coffee, title: "Great Benefits", description: "Competitive salary, health coverage, and more." },
 ];
 
 const openings = [
-  { title: "Senior AI Engineer", department: "Engineering", location: "Remote", type: "Full-time", description: "Build and improve our AI content generation systems." },
-  { title: "Digital Marketing Specialist", department: "Marketing", location: "Hybrid", type: "Full-time", description: "Help clients succeed with strategic campaign management." },
-  { title: "Client Success Manager", department: "Customer Success", location: "Remote", type: "Full-time", description: "Be the trusted advisor for our SME clients." },
-  { title: "Product Designer", department: "Design", location: "Remote", type: "Full-time", description: "Shape the future of our platform with intuitive designs." },
-  { title: "Business Development Rep", department: "Sales", location: "Hybrid", type: "Full-time", description: "Connect with growing businesses and show them how Apping helps." },
+  { title: "Senior AI Engineer", department: "Engineering", location: "Remote", type: "Full-time", description: "Build intelligent automation systems for business process outsourcing." },
+  { title: "BPO Operations Manager", department: "Operations", location: "Hybrid", type: "Full-time", description: "Oversee outsourced teams and ensure exceptional service delivery." },
+  { title: "Client Success Manager", department: "Customer Success", location: "Remote", type: "Full-time", description: "Be the trusted advisor for our outsourcing clients." },
+  { title: "Talent Acquisition Lead", department: "HR", location: "Remote", type: "Full-time", description: "Source and hire top talent for our outsourcing operations." },
+  { title: "Business Development Rep", department: "Sales", location: "Hybrid", type: "Full-time", description: "Connect with businesses looking to outsource their processes." },
 ];
 
 const Careers = () => {
@@ -26,17 +26,16 @@ const Careers = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        {/* Hero */}
         <section className="py-24 md:py-36 bg-background relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] -translate-y-1/3" />
           <div className="container relative">
             <div className="max-w-3xl mx-auto text-center">
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Careers</motion.p>
               <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-6xl text-foreground mb-6">
-                Build the future of <span className="text-primary">AI marketing</span>
+                Join <span className="text-primary">Apping Technology</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-                Join a team making powerful marketing accessible to growing businesses everywhere.
+                Help businesses outsource smarter with AI and world-class talent.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                 <Button size="xl" asChild className="rounded-full px-10">
@@ -47,7 +46,6 @@ const Careers = () => {
           </div>
         </section>
 
-        {/* Perks */}
         <section className="py-24 md:py-32 bg-card">
           <div className="container">
             <ScrollReveal>
@@ -72,7 +70,6 @@ const Careers = () => {
           </div>
         </section>
 
-        {/* Openings */}
         <section id="openings" className="py-24 md:py-32 bg-background">
           <div className="container">
             <ScrollReveal>
@@ -113,7 +110,6 @@ const Careers = () => {
           </div>
         </section>
 
-        {/* CTA */}
         <section className="py-24 md:py-32 bg-card">
           <div className="container">
             <ScrollReveal>
