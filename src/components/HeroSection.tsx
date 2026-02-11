@@ -20,7 +20,7 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Professional business consultant"
-          className="w-full h-full object-cover object-[30%_center]"
+          className="w-full h-full object-cover object-[70%_center]"
         />
         {/* Gradient overlay for text readability on the left */}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/20 md:to-transparent" />
