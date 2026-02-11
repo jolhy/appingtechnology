@@ -7,10 +7,10 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { label: "AI Content Creation", href: "/services" },
-      { label: "Social Media Management", href: "/services" },
-      { label: "ERP Solutions", href: "/services" },
-      { label: "Digital Transformation", href: "/services" },
+      { label: "AI Automation", href: "/services" },
+      { label: "Talent Outsourcing", href: "/services" },
+      { label: "Marketing & Sales", href: "/services" },
+      { label: "Operations & HR", href: "/services" },
     ],
     company: [
       { label: "About Us", href: "/about" },
@@ -30,11 +30,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2.5 mb-6">
-              <img src={appingLogo} alt="Apping" className="h-9 w-auto brightness-0 invert" />
-              <span className="font-serif text-xl text-background">Apping</span>
+              <img src={appingLogo} alt="Apping Technology" className="h-9 w-auto brightness-0 invert" />
+              <span className="font-serif text-xl text-background">Apping Technology</span>
             </Link>
             <p className="text-background/60 mb-6 max-w-sm leading-relaxed text-[15px]">
-              Your growth partner in AI-powered marketing and digital transformation. Helping SMEs succeed with smart technology.
+              Your outsourcing partner — combining AI automation and skilled talent to help businesses scale operations efficiently.
             </p>
           </div>
 

@@ -37,23 +37,21 @@ const Contact = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        {/* Hero */}
         <section className="py-24 md:py-32 bg-background relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] -translate-y-1/3" />
           <div className="container relative">
             <div className="max-w-3xl mx-auto text-center">
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</motion.p>
               <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-6xl text-foreground mb-6">
-                Let's <span className="text-primary">grow together</span>
+                Let's <span className="text-primary">outsource smarter</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Ready to transform your marketing? We'd love to hear from you.
+                Tell us about your business processes and we'll show you how AI and talent can help.
               </motion.p>
             </div>
           </div>
         </section>
 
-        {/* Form + Info */}
         <section className="py-24 md:py-32 bg-card">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
@@ -84,7 +82,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Message *</label>
-                    <Textarea id="message" name="message" required placeholder="Tell us about your project..." rows={6} value={formData.message} onChange={handleChange} className="resize-none rounded-xl" />
+                    <Textarea id="message" name="message" required placeholder="Tell us about the processes you'd like to outsource..." rows={6} value={formData.message} onChange={handleChange} className="resize-none rounded-xl" />
                   </div>
                   <Button type="submit" size="xl" disabled={isSubmitting} className="rounded-full px-10">
                     {isSubmitting ? "Sending..." : "Send Message"}

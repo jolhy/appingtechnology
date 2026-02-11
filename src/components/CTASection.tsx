@@ -13,10 +13,10 @@ const CTASection = () => {
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Ready to transform your marketing?
+              Ready to outsource smarter?
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-              Book a free consultation and discover how AI-powered marketing can accelerate your business growth.
+              Book a free consultation and discover how AI automation and skilled talent can transform your operations.
             </p>
           </ScrollReveal>
 
@@ -40,7 +40,7 @@ const CTASection = () => {
 
           <ScrollReveal delay={0.25}>
             <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
-              {["No commitment required", "30-minute discovery call", "Tailored recommendations"].map((text) => (
+              {["No commitment required", "30-minute discovery call", "Custom outsourcing plan"].map((text) => (
                 <div key={text} className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                   <span>{text}</span>
