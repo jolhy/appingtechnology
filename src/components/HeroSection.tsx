@@ -23,7 +23,7 @@ const HeroSection = () => {
           className="w-full h-full object-cover object-[70%_center]"
         />
         {/* Gradient overlay for text readability on the left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
       </div>
 
       <div className="container relative z-10 py-32 md:py-44">
