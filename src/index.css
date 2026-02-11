@@ -113,7 +113,7 @@
 
   h1, h2, h3 {
     font-family: 'DM Serif Display', Georgia, serif;
-    @apply font-normal tracking-normal;
+    @apply font-bold tracking-normal;
   }
 
   h4, h5, h6 {
