@@ -3,7 +3,6 @@ import { ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import AnimatedCounter from "./motion/AnimatedCounter";
-import heroPerson from "@/assets/hero-person.png";
 
 const benefits = [
   "AI-powered ad creation",
@@ -22,90 +21,77 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
       
       <div className="container relative">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Text */}
-          <div>
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-8"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-soft" />
-              AI-Powered Marketing for Growing Businesses
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6"
-            >
-              Put AI to work
-              <br />
-              <span className="text-primary">for your marketing</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
-            >
-              We create high-quality AI-generated ads, manage your social media, and meet with you monthly to review performance — so you can focus on growing your business.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-start gap-4 mb-12"
-            >
-              <Button size="xl" asChild className="rounded-full px-10">
-                <Link to="/contact">
-                  Book Free Consultation
-                  <ArrowRight size={18} />
-                </Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild className="rounded-full px-10">
-                <Link to="/services">Explore Services</Link>
-              </Button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-wrap items-center gap-10"
-            >
-              {[
-                { value: 200, suffix: "+", label: "Happy Clients" },
-                { value: 3, suffix: "x", label: "Average ROI" },
-                { value: 10, suffix: "K+", label: "Ads Created" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <p className="text-3xl md:text-4xl font-serif text-foreground">
-                    <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Right: Image */}
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative flex justify-center lg:justify-end"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-8"
           >
-            <img
-              src={heroPerson}
-              alt="Marketing professional"
-              className="w-full max-w-lg rounded-3xl object-cover"
-            />
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-soft" />
+            AI-Powered Marketing for Growing Businesses
+          </motion.div>
+
+          {/* Main Headline - Jasper-style large serif */}
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6"
+          >
+            Put AI to work
+            <br />
+            <span className="text-primary">for your marketing</span>
+          </motion.h1>
+
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          >
+            We create high-quality AI-generated ads, manage your social media, and meet with you monthly to review performance — so you can focus on growing your business.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          >
+            <Button size="xl" asChild className="rounded-full px-10">
+              <Link to="/contact">
+                Book Free Consultation
+                <ArrowRight size={18} />
+              </Link>
+            </Button>
+            <Button variant="outline" size="xl" asChild className="rounded-full px-10">
+              <Link to="/services">Explore Services</Link>
+            </Button>
+          </motion.div>
+
+          {/* Trust stats */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-wrap items-center justify-center gap-10 md:gap-16 mb-20"
+          >
+            {[
+              { value: 200, suffix: "+", label: "Happy Clients" },
+              { value: 3, suffix: "x", label: "Average ROI" },
+              { value: 10, suffix: "K+", label: "Ads Created" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <p className="text-3xl md:text-4xl font-serif text-foreground">
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                </p>
+                <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+              </div>
+            ))}
           </motion.div>
         </div>
 
