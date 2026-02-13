@@ -216,7 +216,7 @@ const Careers = () => {
                 {cvFile && (
                   <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-6">
                     <Button size="xl" className="rounded-full px-10" asChild>
-                      <Link to="/contact">Submit Application<ArrowRight size={18} /></Link>
+                      <a href="mailto:recruitment@apping-tech.com">Submit Application<ArrowRight size={18} /></a>
                     </Button>
                   </motion.div>
                 )}
