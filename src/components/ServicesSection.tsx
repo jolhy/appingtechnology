@@ -31,7 +31,7 @@ const steps = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 md:py-36 bg-background relative overflow-hidden grain-overlay">
+    <section id="services" className="py-12 md:py-20 bg-background relative overflow-hidden grain-overlay">
       {/* Decorative shapes */}
       <OrganicShape
         className="w-[400px] h-[400px] -top-32 -right-32 bg-primary/[0.03]"
