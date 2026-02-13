@@ -1,17 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Briefcase, ArrowRight, Users, Heart, Rocket, Coffee } from "lucide-react";
+import { MapPin, Clock, Briefcase, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
-const perks = [
-  { icon: Rocket, title: "Growth Opportunities", description: "Learn and grow at the forefront of AI and BPO." },
-  { icon: Users, title: "Collaborative Culture", description: "Work with talented, supportive people worldwide." },
-  { icon: Heart, title: "Work-Life Balance", description: "Flexible schedules and remote-first options." },
-  { icon: Coffee, title: "Great Benefits", description: "Competitive salary, health coverage, and more." },
-];
 
 const openings = [
   { title: "Senior AI Engineer", department: "Engineering", location: "Remote", type: "Full-time", description: "Build intelligent automation systems for business process outsourcing." },
@@ -46,29 +40,6 @@ const Careers = () => {
           </div>
         </section>
 
-        <section className="py-14 md:py-20 bg-card">
-          <div className="container">
-            <ScrollReveal>
-              <div className="text-center mb-10">
-                <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Why Join Us</p>
-                <h2 className="text-4xl md:text-5xl text-foreground">More than just a job</h2>
-              </div>
-            </ScrollReveal>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {perks.map((perk, i) => (
-                <ScrollReveal key={perk.title} delay={i * 0.08}>
-                  <motion.div className="text-center p-6 rounded-2xl bg-background border border-border/60" whileHover={{ y: -4 }}>
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-                      <perk.icon size={24} className="text-primary" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{perk.title}</h3>
-                    <p className="text-muted-foreground text-sm">{perk.description}</p>
-                  </motion.div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section id="openings" className="py-14 md:py-20 bg-background">
           <div className="container">
