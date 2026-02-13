@@ -10,12 +10,6 @@ const testimonials = [
   { quote: "Our tailor-made application for registering orders was out of date and always crashed. So we sought help from Apping who was able to meet our needs. Apping provided us with a simple yet sophisticated application customized to meet our needs in a very short period of time.", author: "Abdo Elaloudi", role: "Hong Kong", rating: 5 },
 ];
 
-const stats = [
-  { value: 95, suffix: "%", label: "Client Retention" },
-  { value: 50, suffix: "%", label: "Avg. Cost Savings" },
-  { value: 500, suffix: "+", label: "Professionals Deployed" },
-  { value: 30, suffix: "", label: "Days to Full Deployment" },
-];
 
 const SuccessSection = () => {
   return (
@@ -63,24 +57,6 @@ const SuccessSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, i) => (
-            <ScrollReveal key={stat.label} delay={i * 0.08}>
-              <motion.div
-                className="text-center p-6 relative"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 25 }}
-              >
-                {/* Subtle decorative line */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-px bg-primary/20" />
-                <p className="text-4xl md:text-5xl font-serif text-primary mb-2">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                </p>
-                <p className="text-muted-foreground text-sm">{stat.label}</p>
-              </motion.div>
-            </ScrollReveal>
-          ))}
-        </div>
       </div>
     </section>
   );
