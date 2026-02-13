@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import appingLogo from "@/assets/apping-logo.png";
 import augustWong from "@/assets/august-wong.jpg";
+import joLee from "@/assets/jo-lee.jpg";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const values = [
@@ -17,9 +18,7 @@ const values = [
 
 const team = [
   { name: "August Wong", role: "CEO & Co-Founder", bio: "Visionary leader driving Apping Technology's mission to reimagine outsourcing through AI and human talent.", image: augustWong },
-  { name: "Sarah Miller", role: "Head of AI", bio: "Former ML engineer building intelligent automation solutions." },
-  { name: "James Wilson", role: "Head of Talent", bio: "Expert in building and managing high-performing outsourced teams." },
-  { name: "Maria Santos", role: "Operations Director", bio: "Streamlining business processes for companies of all sizes." },
+  { name: "Jo Lee", role: "COO & Co-Founder", bio: "Operational strategist ensuring seamless delivery and scalable growth across all client engagements.", image: joLee },
 ];
 
 const About = () => {
