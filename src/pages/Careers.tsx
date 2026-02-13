@@ -59,9 +59,12 @@ const Careers = () => {
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
                 Help businesses outsource smarter with AI and world-class talent.
               </motion.p>
-              <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+              <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-wrap items-center justify-center gap-4">
                 <Button size="xl" asChild className="rounded-full px-10">
                   <a href="#cv-drop">Drop Your CV<ArrowRight size={18} /></a>
+                </Button>
+                <Button size="xl" variant="outline" asChild className="rounded-full px-10">
+                  <a href="#openings">View Open Positions</a>
                 </Button>
               </motion.div>
             </div>
