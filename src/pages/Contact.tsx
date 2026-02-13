@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Clock, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, Send, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
@@ -12,8 +12,6 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 const contactInfo = [
   { icon: Mail, label: "Email Us", value: "info@appingtechnology.com", href: "mailto:info@appingtechnology.com" },
   { icon: Phone, label: "Call Us", value: "+1 (234) 567-890", href: "tel:+1234567890" },
-  { icon: MapPin, label: "Visit Us", value: "123 Innovation Drive, Tech City, TC 12345", href: "#" },
-  { icon: Clock, label: "Business Hours", value: "Mon - Fri: 9:00 AM - 6:00 PM", href: "#" },
 ];
 
 const Contact = () => {

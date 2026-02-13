@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import appingLogo from "@/assets/apping-logo.png";
 
@@ -72,10 +72,6 @@ const Footer = () => {
                 <a href="tel:+1234567890" className="flex items-center gap-2 text-background/50 hover:text-background transition-colors text-sm">
                   <Phone size={14} />+1 (234) 567-890
                 </a>
-              </li>
-              <li className="flex items-start gap-2 text-background/50 text-sm">
-                <MapPin size={14} className="mt-0.5 flex-shrink-0" />
-                <span>123 Innovation Drive, Tech City</span>
               </li>
             </ul>
           </div>
