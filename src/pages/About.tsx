@@ -8,6 +8,7 @@ import { useState, useEffect, useCallback } from "react";
 import appingLogo from "@/assets/apping-logo.png";
 import augustWong from "@/assets/august-wong.jpg";
 import joLee from "@/assets/jo-lee.jpg";
+import aashnaSharma from "@/assets/aashna-sharma.jpg";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const values = [
@@ -20,6 +21,7 @@ const values = [
 const team = [
   { name: "August Wong", role: "CEO & Co-Founder", bio: "Visionary leader driving Apping Technology's mission to reimagine outsourcing through AI and human talent.", image: augustWong },
   { name: "Jo Lee", role: "COO & Co-Founder", bio: "Operational strategist ensuring seamless delivery and scalable growth across all client engagements.", image: joLee },
+  { name: "Aashna Sharma", role: "Lead HR & Talent Acquisition", bio: "Expert in sourcing and nurturing top talent, building high-performing teams across the organization.", image: aashnaSharma },
 ];
 
 const TeamCarousel = () => {
@@ -72,7 +74,9 @@ const TeamCarousel = () => {
             className="absolute inset-0 text-center p-8 rounded-2xl bg-background border border-border/60 flex flex-row items-center gap-8"
           >
             {member.image ? (
-              <img src={member.image} alt={member.name} className="w-28 h-28 shrink-0 rounded-full object-cover" />
+              <div className="w-28 h-28 shrink-0 rounded-full overflow-hidden">
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover scale-150" />
+              </div>
             ) : (
               <div className="w-28 h-28 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
                 <span className="text-3xl font-serif text-primary">
