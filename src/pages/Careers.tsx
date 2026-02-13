@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { useState, useCallback, useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 import bukaPuasa from "@/assets/careers/buka-puasa.jpg";
@@ -96,7 +97,7 @@ const Careers = () => {
             </ScrollReveal>
             <ScrollReveal>
               <div className="max-w-4xl mx-auto">
-                <Carousel opts={{ loop: true }} className="w-full">
+                <Carousel opts={{ loop: true }} plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]} className="w-full">
                   <CarouselContent>
                     {carouselImages.map((img, i) => (
                       <CarouselItem key={i} className="basis-2/3 md:basis-1/2">
