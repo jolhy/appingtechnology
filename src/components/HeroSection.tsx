@@ -82,7 +82,7 @@ const HeroSection = () => {
             className="flex flex-wrap items-center gap-10 mb-12"
           >
             {[
-              { value: 200, suffix: "+", label: "Clients Served" },
+              { value: 300, suffix: "+", label: "Clients Served" },
               { value: 50, suffix: "%", label: "Avg. Cost Savings" },
               { value: 500, suffix: "+", label: "Professionals Deployed" },
             ].map((stat) => (
