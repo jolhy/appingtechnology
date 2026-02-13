@@ -29,23 +29,23 @@ const Header = () => {
           <span className="font-serif text-xl text-foreground">Apping Technology</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className={`transition-colors duration-200 text-[15px] font-medium ${
-                isActive(link.href)
-                  ? "text-primary"
-                  : "text-foreground/70 hover:text-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden md:flex items-center gap-6">
+          <nav className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                className={`transition-colors duration-200 text-[15px] font-medium ${
+                  isActive(link.href)
+                    ? "text-primary"
+                    : "text-foreground/70 hover:text-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="hidden md:flex items-center gap-3">
           <Button variant="default" size="default" asChild className="rounded-full px-6">
             <Link to="/contact">Get A Demo</Link>
           </Button>
