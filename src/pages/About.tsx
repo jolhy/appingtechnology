@@ -64,6 +64,21 @@ const About = () => {
               </div>
             </div>
           </div>
+          <ScrollReveal delay={0.3}>
+              <div className="mt-10 max-w-3xl mx-auto aspect-video rounded-2xl overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/GCvIF98Bo_o?si=BPQo43MPSGZytfGo"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </ScrollReveal>
         </section>
 
         {/* Values */}
