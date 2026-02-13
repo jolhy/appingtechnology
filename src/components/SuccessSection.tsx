@@ -57,6 +57,12 @@ const SuccessSection = () => {
           ))}
         </div>
 
+        <ScrollReveal delay={0.3}>
+          <p className="text-center text-2xl md:text-3xl italic text-foreground/80 font-serif max-w-2xl mx-auto">
+            "We believe that it takes great people to deliver great products"
+          </p>
+        </ScrollReveal>
+
       </div>
     </section>
   );
