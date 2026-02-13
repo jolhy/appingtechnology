@@ -3,17 +3,28 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "./motion/ScrollReveal";
+import OrganicShape from "./decorative/OrganicShape";
 
 const CTASection = () => {
   return (
-    <section className="py-24 md:py-36 bg-background relative overflow-hidden">
+    <section className="py-24 md:py-36 bg-background relative overflow-hidden grain-overlay">
       <div className="absolute inset-0 bg-primary/[0.02]" />
+
+      {/* Decorative shapes */}
+      <OrganicShape
+        className="w-[500px] h-[500px] -top-48 -right-48 bg-primary/[0.04]"
+        variant="blob"
+      />
+      <OrganicShape
+        className="w-[300px] h-[300px] -bottom-24 -left-24 bg-primary/[0.03]"
+        variant="blob"
+      />
       
-      <div className="container relative">
+      <div className="container relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Ready to outsource smarter?
+              Ready to outsource <span className="italic text-primary">smarter?</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
               Book a free consultation and discover how AI automation and skilled talent can transform your operations.
