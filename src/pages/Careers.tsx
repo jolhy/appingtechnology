@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Briefcase, ArrowRight } from "lucide-react";
+import { MapPin, Clock, Briefcase, ArrowRight, Upload, FileText, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
-
+import { useState, useCallback, useRef } from "react";
 
 const openings = [
   { title: "Senior AI Engineer", department: "Engineering", location: "Remote", type: "Full-time", description: "Build intelligent automation systems for business process outsourcing." },
@@ -16,6 +16,34 @@ const openings = [
 ];
 
 const Careers = () => {
+  const [cvFile, setCvFile] = useState<File | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+  }, []);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    const file = e.dataTransfer.files[0];
+    if (file && (file.type === "application/pdf" || file.type === "application/msword" || file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) {
+      setCvFile(file);
+    }
+  }, []);
+
+  const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) setCvFile(file);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -39,7 +67,6 @@ const Careers = () => {
             </div>
           </div>
         </section>
-
 
         <section id="openings" className="py-14 md:py-20 bg-background">
           <div className="container">
@@ -84,12 +111,68 @@ const Careers = () => {
         <section className="py-14 md:py-20 bg-card">
           <div className="container">
             <ScrollReveal>
-              <div className="max-w-3xl mx-auto text-center">
+              <div className="max-w-2xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl text-foreground mb-4">Don't see the right role?</h2>
-                <p className="text-muted-foreground text-lg mb-6">We're always looking for talented people. Send us your resume.</p>
-                <Button size="xl" asChild className="rounded-full px-10">
-                  <Link to="/contact">Get in Touch<ArrowRight size={18} /></Link>
-                </Button>
+                <p className="text-muted-foreground text-lg mb-8">Drop your CV here and we'll reach out when we find the perfect fit for you.</p>
+
+                <div
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                  onClick={() => fileInputRef.current?.click()}
+                  className={`relative cursor-pointer rounded-2xl border-2 border-dashed p-10 transition-all duration-200 ${
+                    isDragging
+                      ? "border-primary bg-primary/5"
+                      : cvFile
+                        ? "border-primary/40 bg-primary/[0.03]"
+                        : "border-border hover:border-primary/40 hover:bg-muted/50"
+                  }`}
+                >
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".pdf,.doc,.docx"
+                    onChange={handleFileSelect}
+                    className="hidden"
+                  />
+
+                  {cvFile ? (
+                    <div className="flex items-center justify-center gap-3">
+                      <FileText size={24} className="text-primary" />
+                      <span className="text-foreground font-medium">{cvFile.name}</span>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCvFile(null);
+                          if (fileInputRef.current) fileInputRef.current.value = "";
+                        }}
+                        className="ml-2 p-1 rounded-full hover:bg-muted transition-colors"
+                      >
+                        <X size={16} className="text-muted-foreground" />
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                        <Upload size={24} className="text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-foreground font-medium mb-1">
+                          Drag & drop your CV here
+                        </p>
+                        <p className="text-muted-foreground text-sm">or click to browse · PDF, DOC, DOCX</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {cvFile && (
+                  <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-6">
+                    <Button size="xl" className="rounded-full px-10" asChild>
+                      <Link to="/contact">Submit Application<ArrowRight size={18} /></Link>
+                    </Button>
+                  </motion.div>
+                )}
               </div>
             </ScrollReveal>
           </div>
