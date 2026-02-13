@@ -61,7 +61,7 @@ const Careers = () => {
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                 <Button size="xl" asChild className="rounded-full px-10">
-                  <a href="#openings">View Open Positions<ArrowRight size={18} /></a>
+                  <a href="#cv-drop">Drop Your CV<ArrowRight size={18} /></a>
                 </Button>
               </motion.div>
             </div>
@@ -108,7 +108,7 @@ const Careers = () => {
           </div>
         </section>
 
-        <section className="py-14 md:py-20 bg-card">
+        <section id="cv-drop" className="py-14 md:py-20 bg-card">
           <div className="container">
             <ScrollReveal>
               <div className="max-w-2xl mx-auto text-center">
