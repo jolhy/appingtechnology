@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import ScrollReveal from "./motion/ScrollReveal";
 import AnimatedCounter from "./motion/AnimatedCounter";
 import OrganicShape from "./decorative/OrganicShape";
+import teamPhoto from "@/assets/team-photo.png";
 
 const testimonials = [
   { quote: "Apping has implemented an integrated system seamlessly following our unique requirements across multiple departments. Now we have all data in one platform. No more scattered data and we're able to analyze reports for every departments; enabling us to better understand how to make informed decisions.", author: "Triny Kong", role: "Malaysia", rating: 5 },
@@ -61,6 +62,22 @@ const SuccessSection = () => {
           <p className="text-center text-2xl md:text-3xl italic text-foreground/80 font-serif max-w-2xl mx-auto">
             "We believe that it takes great people to deliver great products"
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.4}>
+          <div className="mt-10 max-w-4xl mx-auto">
+            <motion.div
+              className="rounded-2xl overflow-hidden"
+              whileHover={{ scale: 1.01 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <img
+                src={teamPhoto}
+                alt="The Apping Technology team"
+                className="w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
         </ScrollReveal>
 
       </div>
