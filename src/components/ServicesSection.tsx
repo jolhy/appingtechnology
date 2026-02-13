@@ -1,11 +1,12 @@
-import { Bot, Users, Headphones, BarChart3, Calculator, UserPlus, ShoppingCart, Megaphone, Cog, MessageSquare, Wand2, Rocket, LineChart } from "lucide-react";
+import { Bot, Users, Headphones, BarChart3, Calculator, UserPlus, ShoppingCart, Megaphone, Cog, MessageSquare, Wand2, Rocket, LineChart, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./motion/ScrollReveal";
 import OrganicShape from "./decorative/OrganicShape";
 import SectionDivider from "./decorative/SectionDivider";
 
 const aiServices = [
-  { icon: Bot, title: "AI-Powered Marketing", description: "Automated content creation, ad production, and campaign optimization — all driven by AI." },
+  { icon: Bot, title: "AI-Powered Marketing", description: "Automated content creation, ad production, and campaign optimization — all driven by AI.", link: "/ai-marketing" },
   { icon: Cog, title: "AI Operations Automation", description: "Streamline workflows, data entry, reporting, and routine tasks with intelligent automation." },
   { icon: Headphones, title: "AI Customer Support", description: "24/7 AI chatbots and virtual assistants that handle inquiries, tickets, and escalations." },
   { icon: Calculator, title: "AI Accounting & Finance", description: "Automated invoicing, bookkeeping, expense tracking, and financial reporting." },
@@ -95,7 +96,12 @@ const ServicesSection = () => {
                     <service.icon size={24} className="text-primary" />
                   </div>
                   <h3 className="text-xl text-foreground mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
+                  {"link" in service && service.link && (
+                    <Link to={service.link} className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:underline">
+                      Learn more <ArrowRight size={14} />
+                    </Link>
+                  )}
                 </motion.div>
               </ScrollReveal>
             ))}
