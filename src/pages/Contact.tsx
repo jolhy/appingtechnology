@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const contactInfo = [
-  { icon: Mail, label: "Email Us", value: "hello@apping.tech", href: "mailto:hello@apping.tech" },
+  { icon: Mail, label: "Email Us", value: "info@appingtechnology.com", href: "mailto:info@appingtechnology.com" },
   { icon: Phone, label: "Call Us", value: "+1 (234) 567-890", href: "tel:+1234567890" },
   { icon: MapPin, label: "Visit Us", value: "123 Innovation Drive, Tech City, TC 12345", href: "#" },
   { icon: Clock, label: "Business Hours", value: "Mon - Fri: 9:00 AM - 6:00 PM", href: "#" },
