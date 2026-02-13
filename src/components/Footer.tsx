@@ -76,8 +76,8 @@ const Footer = () => {
             <h4 className="font-semibold text-background text-sm uppercase tracking-wider mb-4">Contact</h4>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:hello@apping.tech" className="flex items-center gap-2 text-background/50 hover:text-background transition-colors text-sm">
-                  <Mail size={14} />hello@apping.tech
+                <a href="mailto:info@appingtechnology.com" className="flex items-center gap-2 text-background/50 hover:text-background transition-colors text-sm">
+                  <Mail size={14} />info@appingtechnology.com
                 </a>
               </li>
               <li>
