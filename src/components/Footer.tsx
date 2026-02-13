@@ -26,8 +26,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-foreground text-background/80">
-      <div className="container py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+      <div className="container py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2.5 mb-6">
               <img src={appingLogo} alt="Apping Technology" className="h-9 w-auto brightness-0 invert" />

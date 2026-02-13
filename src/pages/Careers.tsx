@@ -26,15 +26,15 @@ const Careers = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        <section className="py-24 md:py-36 bg-background relative overflow-hidden">
+        <section className="py-14 md:py-20 bg-background relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] -translate-y-1/3" />
           <div className="container relative">
             <div className="max-w-3xl mx-auto text-center">
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Careers</motion.p>
-              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-6xl text-foreground mb-6">
+              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-6xl text-foreground mb-4">
                 Join <span className="text-primary">Apping Technology</span>
               </motion.h1>
-              <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+              <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
                 Help businesses outsource smarter with AI and world-class talent.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
@@ -46,10 +46,10 @@ const Careers = () => {
           </div>
         </section>
 
-        <section className="py-24 md:py-32 bg-card">
+        <section className="py-14 md:py-20 bg-card">
           <div className="container">
             <ScrollReveal>
-              <div className="text-center mb-16">
+              <div className="text-center mb-10">
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Why Join Us</p>
                 <h2 className="text-4xl md:text-5xl text-foreground">More than just a job</h2>
               </div>
@@ -70,10 +70,10 @@ const Careers = () => {
           </div>
         </section>
 
-        <section id="openings" className="py-24 md:py-32 bg-background">
+        <section id="openings" className="py-14 md:py-20 bg-background">
           <div className="container">
             <ScrollReveal>
-              <div className="text-center mb-16">
+              <div className="text-center mb-10">
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Open Positions</p>
                 <h2 className="text-4xl md:text-5xl text-foreground">Find your next role</h2>
               </div>
@@ -110,12 +110,12 @@ const Careers = () => {
           </div>
         </section>
 
-        <section className="py-24 md:py-32 bg-card">
+        <section className="py-14 md:py-20 bg-card">
           <div className="container">
             <ScrollReveal>
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl text-foreground mb-6">Don't see the right role?</h2>
-                <p className="text-muted-foreground text-lg mb-8">We're always looking for talented people. Send us your resume.</p>
+                <h2 className="text-4xl md:text-5xl text-foreground mb-4">Don't see the right role?</h2>
+                <p className="text-muted-foreground text-lg mb-6">We're always looking for talented people. Send us your resume.</p>
                 <Button size="xl" asChild className="rounded-full px-10">
                   <Link to="/contact">Get in Touch<ArrowRight size={18} /></Link>
                 </Button>
