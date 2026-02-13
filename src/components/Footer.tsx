@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import appingLogo from "@/assets/apping-logo.png";
 
@@ -36,18 +36,6 @@ const Footer = () => {
             <p className="text-background/60 mb-6 max-w-sm leading-relaxed text-[15px]">
               Your outsourcing partner — combining AI automation and skilled talent to help businesses scale operations efficiently.
             </p>
-            <div className="flex gap-3">
-              {[
-                { icon: Facebook, href: "https://www.facebook.com/Appingtech?mibextid=ZbWKwL", label: "Facebook" },
-                { icon: Linkedin, href: "https://www.linkedin.com/company/apping-technology/posts/?feedView=all", label: "LinkedIn" },
-                { icon: Instagram, href: "https://www.instagram.com/appingtechnology", label: "Instagram" },
-                { icon: Youtube, href: "https://www.youtube.com/@appingtechnology6975", label: "YouTube" },
-              ].map((social) => (
-                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-md bg-background/10 flex items-center justify-center text-background/50 hover:text-background hover:bg-background/20 transition-colors" aria-label={social.label}>
-                  <social.icon size={16} />
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>
