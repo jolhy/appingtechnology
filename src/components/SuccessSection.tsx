@@ -71,43 +71,45 @@ const SuccessSection = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={0.4}>
-          <div className="mt-10 max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <p className="text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto">
-                An award-winning company in APAC, Apping Technology started with a background in ERP (Enterprise Resource Planning) software — and has since evolved into a full-service outsourcing partner.
-              </p>
-            </div>
+          <div className="mt-10 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <motion.div
+                className="rounded-2xl overflow-hidden"
+                whileHover={{ scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <img
+                  src={teamPhoto}
+                  alt="The Apping Technology team"
+                  className="w-full h-auto object-cover"
+                />
+              </motion.div>
 
-            <div className="grid sm:grid-cols-3 gap-4 mb-10">
-              {awards.map((award, i) => (
-                <ScrollReveal key={award.year} delay={0.4 + i * 0.1}>
-                  <motion.div
-                    className="relative p-6 rounded-2xl bg-background border border-border/60 text-center"
-                    whileHover={{ y: -4 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                      <Trophy size={20} className="text-primary" />
+              <div>
+                <p className="text-foreground font-semibold text-lg mb-1">
+                  Award-Winning Company in APAC
+                </p>
+                <p className="text-muted-foreground text-[15px] leading-relaxed mb-6">
+                  Started with a background in ERP (Enterprise Resource Planning) software — and has since evolved into a full-service outsourcing partner.
+                </p>
+
+                <div className="space-y-4">
+                  {awards.map((award) => (
+                    <div key={award.year} className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Trophy size={16} className="text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground text-[15px]">
+                          <span className="text-primary">{award.year}</span> — {award.title}
+                        </p>
+                        <p className="text-muted-foreground text-sm">{award.event}</p>
+                      </div>
                     </div>
-                    <p className="text-primary font-semibold text-sm mb-1">{award.year}</p>
-                    <p className="font-semibold text-foreground text-[15px] mb-1">{award.title}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{award.event}</p>
-                  </motion.div>
-                </ScrollReveal>
-              ))}
+                  ))}
+                </div>
+              </div>
             </div>
-
-            <motion.div
-              className="rounded-2xl overflow-hidden"
-              whileHover={{ scale: 1.01 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            >
-              <img
-                src={teamPhoto}
-                alt="The Apping Technology team"
-                className="w-full h-auto object-cover"
-              />
-            </motion.div>
           </div>
         </ScrollReveal>
 
