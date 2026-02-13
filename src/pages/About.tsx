@@ -1,9 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Target, Users, Lightbulb, Award, ArrowRight } from "lucide-react";
+import { Target, Users, Lightbulb, Award, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
 import appingLogo from "@/assets/apping-logo.png";
 import augustWong from "@/assets/august-wong.jpg";
 import joLee from "@/assets/jo-lee.jpg";
@@ -20,6 +21,82 @@ const team = [
   { name: "August Wong", role: "CEO & Co-Founder", bio: "Visionary leader driving Apping Technology's mission to reimagine outsourcing through AI and human talent.", image: augustWong },
   { name: "Jo Lee", role: "COO & Co-Founder", bio: "Operational strategist ensuring seamless delivery and scalable growth across all client engagements.", image: joLee },
 ];
+
+const TeamCarousel = () => {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const next = useCallback(() => {
+    setDirection(1);
+    setCurrent((prev) => (prev + 1) % team.length);
+  }, []);
+
+  const prev = useCallback(() => {
+    setDirection(-1);
+    setCurrent((prev) => (prev - 1 + team.length) % team.length);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(next, 4000);
+    return () => clearInterval(timer);
+  }, [next]);
+
+  const member = team[current];
+
+  const variants = {
+    enter: (dir: number) => ({ x: dir > 0 ? 80 : -80, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (dir: number) => ({ x: dir > 0 ? -80 : 80, opacity: 0 }),
+  };
+
+  return (
+    <div className="flex items-center justify-center gap-6 max-w-md mx-auto">
+      <button
+        onClick={prev}
+        className="shrink-0 w-10 h-10 rounded-full border border-border/60 bg-background flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
+        aria-label="Previous member"
+      >
+        <ChevronLeft size={20} />
+      </button>
+
+      <div className="relative w-64 h-64 overflow-hidden">
+        <AnimatePresence custom={direction} mode="wait">
+          <motion.div
+            key={current}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="absolute inset-0 text-center p-6 rounded-2xl bg-background border border-border/60 flex flex-col items-center justify-center"
+          >
+            {member.image ? (
+              <img src={member.image} alt={member.name} className="w-20 h-20 rounded-full object-cover mx-auto mb-4" />
+            ) : (
+              <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
+                <span className="text-2xl font-serif text-primary">
+                  {member.name.split(' ').map(n => n[0]).join('')}
+                </span>
+              </div>
+            )}
+            <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
+            <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
+            <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <button
+        onClick={next}
+        className="shrink-0 w-10 h-10 rounded-full border border-border/60 bg-background flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
+        aria-label="Next member"
+      >
+        <ChevronRight size={20} />
+      </button>
+    </div>
+  );
+};
 
 const About = () => {
   return (
@@ -115,26 +192,7 @@ const About = () => {
                 <h2 className="text-4xl md:text-5xl text-foreground mb-4">Meet the people behind Apping Technology</h2>
               </div>
             </ScrollReveal>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {team.map((member, i) => (
-                <ScrollReveal key={member.name} delay={i * 0.08}>
-                  <motion.div className="text-center p-6 rounded-2xl bg-background border border-border/60" whileHover={{ y: -4 }}>
-                    {member.image ? (
-                      <img src={member.image} alt={member.name} className="w-16 h-16 rounded-full object-cover mx-auto mb-4" />
-                    ) : (
-                      <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-xl font-serif text-primary">
-                          {member.name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
-                    )}
-                    <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
-                    <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
-                    <p className="text-muted-foreground text-sm">{member.bio}</p>
-                  </motion.div>
-                </ScrollReveal>
-              ))}
-            </div>
+            <TeamCarousel />
           </div>
         </section>
 
