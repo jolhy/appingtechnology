@@ -9,6 +9,7 @@ import appingLogo from "@/assets/apping-logo.png";
 import augustWong from "@/assets/august-wong.jpg";
 import joLee from "@/assets/jo-lee.jpg";
 import aashnaSharma from "@/assets/aashna-sharma.jpg";
+import tilakJethwa from "@/assets/tilak-jethwa.jpg";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const values = [
@@ -22,6 +23,7 @@ const team = [
   { name: "August Wong", role: "CEO & Co-Founder", bio: "Visionary leader driving Apping Technology's mission to reimagine outsourcing through AI and human talent.", image: augustWong },
   { name: "Jo Lee", role: "COO & Co-Founder", bio: "Operational strategist ensuring seamless delivery and scalable growth across all client engagements.", image: joLee },
   { name: "Aashna Sharma", role: "Lead HR & Talent Acquisition", bio: "Expert in sourcing and nurturing top talent, building high-performing teams across the organization.", image: aashnaSharma },
+  { name: "Tilak Jethwa", role: "Lead Project Manager", bio: "Driving project excellence and ensuring timely delivery across all client engagements.", image: tilakJethwa },
 ];
 
 const TeamCarousel = () => {
