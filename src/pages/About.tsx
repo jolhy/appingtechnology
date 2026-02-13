@@ -112,12 +112,12 @@ const About = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-14 md:py-20 bg-background relative overflow-hidden">
+        <section className="py-8 md:py-12 bg-background relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] -translate-y-1/3" />
           <div className="container relative">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.img src={appingLogo} alt="Apping Technology" className="h-20 w-auto mx-auto mb-6" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} />
-              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="text-5xl md:text-6xl text-foreground mb-4">
+              <motion.img src={appingLogo} alt="Apping Technology" className="h-16 w-auto mx-auto mb-4" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} />
+              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="text-5xl md:text-6xl text-foreground mb-3">
                 About <span className="text-primary">Apping Technology</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -128,16 +128,16 @@ const About = () => {
         </section>
 
         {/* Story */}
-        <section className="py-14 md:py-20 bg-card">
+        <section className="py-8 md:py-12 bg-card">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <ScrollReveal>
-                <div className="text-center mb-8">
+                <div className="text-center mb-5">
                   <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Our Story</p>
                   <h2 className="text-4xl md:text-5xl text-foreground mb-4">Outsourcing, reimagined</h2>
                 </div>
               </ScrollReveal>
-              <div className="space-y-6 text-muted-foreground text-[17px] leading-relaxed">
+              <div className="space-y-4 text-muted-foreground text-[17px] leading-relaxed">
                 {[
                   "Apping Technology was founded with a clear mission: make business process outsourcing smarter, faster, and more accessible. Too many companies struggle with the cost and complexity of scaling their teams and operations.",
                   "We saw an opportunity to combine two powerful approaches — AI automation for repetitive, data-driven tasks, and skilled human professionals for work that requires judgment, creativity, and personal touch.",
@@ -150,7 +150,7 @@ const About = () => {
             </div>
           </div>
           <ScrollReveal delay={0.3}>
-              <div className="mt-10 max-w-3xl mx-auto aspect-video rounded-2xl overflow-hidden">
+              <div className="mt-8 max-w-3xl mx-auto aspect-video rounded-2xl overflow-hidden">
                 <iframe
                   width="100%"
                   height="100%"
@@ -167,22 +167,22 @@ const About = () => {
         </section>
 
         {/* Values */}
-        <section className="py-14 md:py-20 bg-background">
+        <section className="py-8 md:py-12 bg-background">
           <div className="container">
             <ScrollReveal>
-              <div className="text-center mb-10">
+              <div className="text-center mb-6">
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Our Values</p>
                 <h2 className="text-4xl md:text-5xl text-foreground">What we stand for</h2>
               </div>
             </ScrollReveal>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
               {values.map((value, i) => (
                 <ScrollReveal key={value.title} delay={i * 0.08}>
-                  <motion.div className="text-center p-6" whileHover={{ y: -4 }}>
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-                      <value.icon size={28} className="text-primary" />
+                  <motion.div className="text-center p-4" whileHover={{ y: -4 }}>
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                      <value.icon size={24} className="text-primary" />
                     </div>
-                    <h3 className="text-xl text-foreground mb-3">{value.title}</h3>
+                    <h3 className="text-xl text-foreground mb-2">{value.title}</h3>
                     <p className="text-muted-foreground text-[15px] leading-relaxed">{value.description}</p>
                   </motion.div>
                 </ScrollReveal>
@@ -192,10 +192,10 @@ const About = () => {
         </section>
 
         {/* Team */}
-        <section className="py-14 md:py-20 bg-card">
+        <section className="py-8 md:py-12 bg-card">
           <div className="container">
             <ScrollReveal>
-              <div className="text-center mb-10">
+              <div className="text-center mb-6">
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Our Team</p>
                 <h2 className="text-4xl md:text-5xl text-foreground mb-4">Meet the people behind Apping Technology</h2>
               </div>
@@ -205,12 +205,12 @@ const About = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-14 md:py-20 bg-background">
+        <section className="py-8 md:py-12 bg-background">
           <div className="container">
             <ScrollReveal>
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl text-foreground mb-4">Ready to work together?</h2>
-                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">Join the hundreds of businesses outsourcing smarter with Apping Technology.</p>
+                <h2 className="text-4xl md:text-5xl text-foreground mb-3">Ready to work together?</h2>
+                <p className="text-muted-foreground text-lg mb-5 leading-relaxed">Join the hundreds of businesses outsourcing smarter with Apping Technology.</p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="xl" asChild className="rounded-full px-10">
                     <Link to="/contact">Get in Touch<ArrowRight size={18} /></Link>
