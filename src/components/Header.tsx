@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background via-background/80 to-transparent border-b border-transparent" style={{ paddingBottom: '1rem' }}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background via-background/80 to-transparent" style={{ paddingBottom: '1rem' }}>
       <div className="container flex items-center justify-between h-16 md:h-[72px]">
         <Link to="/" className="flex items-center gap-2.5">
           <img src={appingLogo} alt="Apping" className="h-9 w-auto" />
