@@ -5,9 +5,9 @@ import AnimatedCounter from "./motion/AnimatedCounter";
 import OrganicShape from "./decorative/OrganicShape";
 
 const testimonials = [
-  { quote: "Apping Technology handles our entire customer support with AI chatbots and a dedicated team. Response times dropped by 80% and our customers love it.", author: "Sarah Chen", role: "COO, Bloom Boutique", rating: 5 },
-  { quote: "We outsourced our accounting and HR to Apping. The combination of AI automation and skilled professionals saved us over 40% in operational costs.", author: "Marcus Johnson", role: "CEO, TechFix Solutions", rating: 5 },
-  { quote: "Their talent outsourcing for our sales team was a game changer. We scaled from 2 to 15 reps in three months without the hiring headaches.", author: "Lisa Martinez", role: "Director, Healthy Harvest Co.", rating: 5 },
+  { quote: "Apping has implemented an integrated system seamlessly following our unique requirements across multiple departments. Now we have all data in one platform. No more scattered data and we're able to analyze reports for every departments; enabling us to better understand how to make informed decisions.", author: "Triny Kong", role: "Malaysia", rating: 5 },
+  { quote: "The sales operating system is excellent and very easy to use, it has all the necessary entries and records we need and we are now able to record our sales much faster. The team always responded to us promptly and addressed our issues quickly and responsibly. Everyone is very nice, professional & easy to work with. We are very confident in the operating system & really appreciative of the team.", author: "Angela Wong", role: "Hong Kong", rating: 5 },
+  { quote: "Our tailor-made application for registering orders was out of date and always crashed. So we sought help from Apping who was able to meet our needs. Apping provided us with a simple yet sophisticated application customized to meet our needs in a very short period of time.", author: "Abdo Elaloudi", role: "Hong Kong", rating: 5 },
 ];
 
 const stats = [
