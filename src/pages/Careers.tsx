@@ -6,6 +6,21 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { useState, useCallback, useRef } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+
+import bukaPuasa from "@/assets/careers/buka-puasa.jpg";
+import networking from "@/assets/careers/networking.png";
+import teamDinner from "@/assets/careers/team-dinner.jpg";
+import cipsprint from "@/assets/careers/cipsprint.png";
+import teamFun from "@/assets/careers/team-fun.jpg";
+
+const carouselImages = [
+  { src: bukaPuasa, alt: "Team buka puasa gathering" },
+  { src: networking, alt: "Networking event" },
+  { src: teamDinner, alt: "Team dinner celebration" },
+  { src: cipsprint, alt: "CIPSprint event" },
+  { src: teamFun, alt: "Team fun moments" },
+];
 
 const openings = [
   { title: "Senior AI Engineer", department: "Engineering", location: "Remote", type: "Full-time", description: "Build intelligent automation systems for business process outsourcing." },
@@ -68,6 +83,34 @@ const Careers = () => {
                 </Button>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        <section className="py-14 md:py-20 bg-card">
+          <div className="container">
+            <ScrollReveal>
+              <div className="text-center mb-10">
+                <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Life at Apping</p>
+                <h2 className="text-4xl md:text-5xl text-foreground">Our Culture</h2>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal>
+              <div className="max-w-4xl mx-auto">
+                <Carousel opts={{ loop: true }} className="w-full">
+                  <CarouselContent>
+                    {carouselImages.map((img, i) => (
+                      <CarouselItem key={i}>
+                        <div className="overflow-hidden rounded-2xl aspect-video">
+                          <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
