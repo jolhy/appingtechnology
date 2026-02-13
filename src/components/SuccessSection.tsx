@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import ScrollReveal from "./motion/ScrollReveal";
 import AnimatedCounter from "./motion/AnimatedCounter";
@@ -9,6 +9,12 @@ const testimonials = [
   { quote: "Apping has implemented an integrated system seamlessly following our unique requirements across multiple departments. Now we have all data in one platform. No more scattered data and we're able to analyze reports for every departments; enabling us to better understand how to make informed decisions.", author: "Triny Kong", role: "Malaysia", rating: 5 },
   { quote: "The sales operating system is excellent and very easy to use, it has all the necessary entries and records we need and we are now able to record our sales much faster. The team always responded to us promptly and addressed our issues quickly and responsibly. Everyone is very nice, professional & easy to work with. We are very confident in the operating system & really appreciative of the team.", author: "Angela Wong", role: "Hong Kong", rating: 5 },
   { quote: "Our tailor-made application for registering orders was out of date and always crashed. So we sought help from Apping who was able to meet our needs. Apping provided us with a simple yet sophisticated application customized to meet our needs in a very short period of time.", author: "Abdo Elaloudi", role: "Hong Kong", rating: 5 },
+];
+
+const awards = [
+  { year: "2024", title: "Top 10 Winner", event: "HK Tech 300 Southeast Asia Start-up Competition" },
+  { year: "2023", title: "First-Place Winner", event: "China-Malaysia Science Technology Innovation Summit" },
+  { year: "2022", title: "Top 5th Percentile", event: "Cradle Fund CIP Sprint Program" },
 ];
 
 
@@ -66,6 +72,31 @@ const SuccessSection = () => {
 
         <ScrollReveal delay={0.4}>
           <div className="mt-10 max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <p className="text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto">
+                An award-winning company in APAC, Apping Technology started with a background in ERP (Enterprise Resource Planning) software — and has since evolved into a full-service outsourcing partner.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-4 mb-10">
+              {awards.map((award, i) => (
+                <ScrollReveal key={award.year} delay={0.4 + i * 0.1}>
+                  <motion.div
+                    className="relative p-6 rounded-2xl bg-background border border-border/60 text-center"
+                    whileHover={{ y: -4 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                      <Trophy size={20} className="text-primary" />
+                    </div>
+                    <p className="text-primary font-semibold text-sm mb-1">{award.year}</p>
+                    <p className="font-semibold text-foreground text-[15px] mb-1">{award.title}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{award.event}</p>
+                  </motion.div>
+                </ScrollReveal>
+              ))}
+            </div>
+
             <motion.div
               className="rounded-2xl overflow-hidden"
               whileHover={{ scale: 1.01 }}
