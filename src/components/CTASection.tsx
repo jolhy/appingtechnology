@@ -7,7 +7,7 @@ import OrganicShape from "./decorative/OrganicShape";
 
 const CTASection = () => {
   return (
-    <section className="py-24 md:py-36 bg-background relative overflow-hidden grain-overlay">
+    <section className="py-14 md:py-20 bg-background relative overflow-hidden grain-overlay">
       <div className="absolute inset-0 bg-primary/[0.02]" />
 
       {/* Decorative shapes */}
