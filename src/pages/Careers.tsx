@@ -99,7 +99,7 @@ const Careers = () => {
                 <Carousel opts={{ loop: true }} className="w-full">
                   <CarouselContent>
                     {carouselImages.map((img, i) => (
-                      <CarouselItem key={i}>
+                      <CarouselItem key={i} className="basis-2/3 md:basis-1/2">
                         <div className="overflow-hidden rounded-2xl aspect-video">
                           <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
                         </div>
