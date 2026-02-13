@@ -41,10 +41,10 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-14 md:py-20 bg-background">
       <div className="container">
         <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10">
             <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em] mb-4">
               FAQ
             </p>
