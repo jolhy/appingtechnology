@@ -5,6 +5,7 @@ import { Target, Users, Lightbulb, Award, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import appingLogo from "@/assets/apping-logo.png";
+import augustWong from "@/assets/august-wong.jpg";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const values = [
@@ -15,7 +16,7 @@ const values = [
 ];
 
 const team = [
-  { name: "Alex Chen", role: "CEO & Founder", bio: "15+ years in BPO, digital transformation, and AI innovation." },
+  { name: "August Wong", role: "CEO & Co-Founder", bio: "Visionary leader driving Apping Technology's mission to reimagine outsourcing through AI and human talent.", image: augustWong },
   { name: "Sarah Miller", role: "Head of AI", bio: "Former ML engineer building intelligent automation solutions." },
   { name: "James Wilson", role: "Head of Talent", bio: "Expert in building and managing high-performing outsourced teams." },
   { name: "Maria Santos", role: "Operations Director", bio: "Streamlining business processes for companies of all sizes." },
@@ -119,11 +120,15 @@ const About = () => {
               {team.map((member, i) => (
                 <ScrollReveal key={member.name} delay={i * 0.08}>
                   <motion.div className="text-center p-6 rounded-2xl bg-background border border-border/60" whileHover={{ y: -4 }}>
-                    <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-xl font-serif text-primary">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
+                    {member.image ? (
+                      <img src={member.image} alt={member.name} className="w-16 h-16 rounded-full object-cover mx-auto mb-4" />
+                    ) : (
+                      <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
+                        <span className="text-xl font-serif text-primary">
+                          {member.name.split(' ').map(n => n[0]).join('')}
+                        </span>
+                      </div>
+                    )}
                     <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
                     <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
                     <p className="text-muted-foreground text-sm">{member.bio}</p>
