@@ -50,7 +50,7 @@ const TeamCarousel = () => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-6 max-w-md mx-auto">
+    <div className="flex items-center justify-center gap-8 max-w-3xl mx-auto">
       <button
         onClick={prev}
         className="shrink-0 w-10 h-10 rounded-full border border-border/60 bg-background flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
@@ -59,7 +59,7 @@ const TeamCarousel = () => {
         <ChevronLeft size={20} />
       </button>
 
-      <div className="relative w-64 h-64 overflow-hidden">
+      <div className="relative w-full h-56 overflow-hidden">
         <AnimatePresence custom={direction} mode="wait">
           <motion.div
             key={current}
@@ -69,20 +69,22 @@ const TeamCarousel = () => {
             animate="center"
             exit="exit"
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="absolute inset-0 text-center p-6 rounded-2xl bg-background border border-border/60 flex flex-col items-center justify-center"
+            className="absolute inset-0 text-center p-8 rounded-2xl bg-background border border-border/60 flex flex-row items-center gap-8"
           >
             {member.image ? (
-              <img src={member.image} alt={member.name} className="w-20 h-20 rounded-full object-cover mx-auto mb-4" />
+              <img src={member.image} alt={member.name} className="w-28 h-28 shrink-0 rounded-full object-cover" />
             ) : (
-              <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-serif text-primary">
+              <div className="w-28 h-28 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+                <span className="text-3xl font-serif text-primary">
                   {member.name.split(' ').map(n => n[0]).join('')}
                 </span>
               </div>
             )}
-            <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
-            <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
-            <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+            <div className="text-left">
+              <h3 className="text-xl font-semibold text-foreground mb-1">{member.name}</h3>
+              <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>
