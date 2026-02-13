@@ -3,6 +3,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import AnimatedCounter from "./motion/AnimatedCounter";
+import OrganicShape from "./decorative/OrganicShape";
 import heroImage from "@/assets/hero-image.jpeg";
 
 const benefits = [
@@ -14,7 +15,7 @@ const benefits = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden grain-overlay">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -25,6 +26,16 @@ const HeroSection = () => {
         {/* Gradient overlay for text readability on the left */}
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
       </div>
+
+      {/* Decorative organic shapes */}
+      <OrganicShape
+        className="w-[500px] h-[500px] -top-40 -left-40 bg-primary/[0.04]"
+        variant="blob"
+      />
+      <OrganicShape
+        className="w-[300px] h-[300px] bottom-20 left-[30%] bg-primary/[0.03]"
+        variant="blob"
+      />
 
       <div className="container relative z-10 py-32 md:py-44">
         <div className="max-w-xl">
@@ -46,7 +57,7 @@ const HeroSection = () => {
           >
             Outsource smarter
             <br />
-            <span className="text-primary">with AI & talent</span>
+            <span className="text-primary italic">with AI & talent</span>
           </motion.h1>
 
           <motion.p
@@ -85,13 +96,19 @@ const HeroSection = () => {
               { value: 300, suffix: "+", label: "Clients Served" },
               { value: 50, suffix: "%", label: "Avg. Cost Savings" },
               { value: 500, suffix: "+", label: "Professionals Deployed" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
+            ].map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                className="text-center"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + i * 0.1 }}
+              >
                 <p className="text-3xl md:text-4xl font-serif text-foreground">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
 
