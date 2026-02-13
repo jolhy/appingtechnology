@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
@@ -116,6 +116,21 @@ const Contact = () => {
                       </div>
                     </motion.a>
                   ))}
+                </div>
+                <div className="mt-8 pt-8 border-t border-border/60">
+                  <p className="font-semibold text-foreground text-sm mb-4">Follow Us</p>
+                  <div className="flex gap-3">
+                    {[
+                      { icon: Facebook, href: "https://www.facebook.com/Appingtech?mibextid=ZbWKwL", label: "Facebook" },
+                      { icon: Linkedin, href: "https://www.linkedin.com/company/apping-technology/posts/?feedView=all", label: "LinkedIn" },
+                      { icon: Instagram, href: "https://www.instagram.com/appingtechnology", label: "Instagram" },
+                      { icon: Youtube, href: "https://www.youtube.com/@appingtechnology6975", label: "YouTube" },
+                    ].map((social) => (
+                      <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors" aria-label={social.label}>
+                        <social.icon size={18} />
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </ScrollReveal>
             </div>
