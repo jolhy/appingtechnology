@@ -37,13 +37,13 @@ const HeroSection = () => {
         variant="blob"
       />
 
-      <div className="container relative z-10 py-32 md:py-44">
+      <div className="container relative z-10 py-24 md:py-32">
         <div className="max-w-xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-6"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-soft" />
             Business Process Outsourcing — AI & Talent
@@ -64,7 +64,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-lg mb-10 leading-relaxed"
+            className="text-lg md:text-xl text-muted-foreground max-w-lg mb-8 leading-relaxed"
           >
             Apping Technology helps businesses outsource their processes — through AI automation or skilled professionals. Marketing, operations, helpdesk, accounting, HR, sales, and more.
           </motion.p>
@@ -73,7 +73,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-start gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-start gap-4 mb-8"
           >
             <Button size="xl" asChild className="rounded-full px-10">
               <Link to="/contact">
@@ -90,7 +90,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap items-center gap-10 mb-12"
+            className="flex flex-wrap items-center gap-10 mb-8"
           >
             {[
               { value: 300, suffix: "+", label: "Clients Served" },

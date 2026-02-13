@@ -37,12 +37,12 @@ const Contact = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+        <section className="py-14 md:py-20 bg-background relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] -translate-y-1/3" />
           <div className="container relative">
             <div className="max-w-3xl mx-auto text-center">
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</motion.p>
-              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-6xl text-foreground mb-6">
+              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-6xl text-foreground mb-4">
                 Let's <span className="text-primary">outsource smarter</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -52,9 +52,9 @@ const Contact = () => {
           </div>
         </section>
 
-        <section className="py-24 md:py-32 bg-card">
+        <section className="py-14 md:py-20 bg-card">
           <div className="container">
-            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
               <ScrollReveal direction="left">
                 <h2 className="text-3xl md:text-4xl text-foreground mb-2">Send us a message</h2>
                 <p className="text-muted-foreground mb-8">We'll get back to you within 24 hours.</p>

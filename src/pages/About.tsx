@@ -27,12 +27,12 @@ const About = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-24 md:py-36 bg-background relative overflow-hidden">
+        <section className="py-14 md:py-20 bg-background relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] -translate-y-1/3" />
           <div className="container relative">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.img src={appingLogo} alt="Apping Technology" className="h-20 w-auto mx-auto mb-8" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} />
-              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="text-5xl md:text-6xl text-foreground mb-6">
+              <motion.img src={appingLogo} alt="Apping Technology" className="h-20 w-auto mx-auto mb-6" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} />
+              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="text-5xl md:text-6xl text-foreground mb-4">
                 About <span className="text-primary">Apping Technology</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -43,13 +43,13 @@ const About = () => {
         </section>
 
         {/* Story */}
-        <section className="py-24 md:py-32 bg-card">
+        <section className="py-14 md:py-20 bg-card">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <ScrollReveal>
-                <div className="text-center mb-12">
-                  <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Our Story</p>
-                  <h2 className="text-4xl md:text-5xl text-foreground mb-6">Outsourcing, reimagined</h2>
+                <div className="text-center mb-8">
+                  <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Our Story</p>
+                  <h2 className="text-4xl md:text-5xl text-foreground mb-4">Outsourcing, reimagined</h2>
                 </div>
               </ScrollReveal>
               <div className="space-y-6 text-muted-foreground text-[17px] leading-relaxed">
@@ -67,10 +67,10 @@ const About = () => {
         </section>
 
         {/* Values */}
-        <section className="py-24 md:py-32 bg-background">
+        <section className="py-14 md:py-20 bg-background">
           <div className="container">
             <ScrollReveal>
-              <div className="text-center mb-16">
+              <div className="text-center mb-10">
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Our Values</p>
                 <h2 className="text-4xl md:text-5xl text-foreground">What we stand for</h2>
               </div>
@@ -92,10 +92,10 @@ const About = () => {
         </section>
 
         {/* Team */}
-        <section className="py-24 md:py-32 bg-card">
+        <section className="py-14 md:py-20 bg-card">
           <div className="container">
             <ScrollReveal>
-              <div className="text-center mb-16">
+              <div className="text-center mb-10">
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Our Team</p>
                 <h2 className="text-4xl md:text-5xl text-foreground mb-4">Meet the people behind Apping Technology</h2>
               </div>
@@ -120,12 +120,12 @@ const About = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-24 md:py-32 bg-background">
+        <section className="py-14 md:py-20 bg-background">
           <div className="container">
             <ScrollReveal>
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl text-foreground mb-6">Ready to work together?</h2>
-                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">Join the hundreds of businesses outsourcing smarter with Apping Technology.</p>
+                <h2 className="text-4xl md:text-5xl text-foreground mb-4">Ready to work together?</h2>
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">Join the hundreds of businesses outsourcing smarter with Apping Technology.</p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="xl" asChild className="rounded-full px-10">
                     <Link to="/contact">Get in Touch<ArrowRight size={18} /></Link>
