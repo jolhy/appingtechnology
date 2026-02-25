@@ -12,9 +12,12 @@ const testimonials = [
 ];
 
 const awards = [
-  { year: "2024", title: "Top 10 Winner", event: "HK Tech 300 Southeast Asia Start-up Competition" },
-  { year: "2023", title: "First-Place Winner", event: "China-Malaysia Science Technology Innovation Summit" },
-  { year: "2022", title: "Top 5th Percentile", event: "Cradle Fund CIP Sprint Program" },
+  { year: "2026", title: "Top 30 Finalist", event: "Alibaba Jumpstarter (2nd consecutive year)" },
+  { year: "2025", title: "HK Tech300 Top 10 Winner", event: "USD 140K investment" },
+  { year: "2025", title: "Top 30 Finalist", event: "Alibaba Jumpstarter Global Championship" },
+  { year: "2025", title: "Top 10 Finalist", event: "Hainan SEA AI Hardware Battle" },
+  { year: "2024", title: "Major Contracts", event: "Airbus, LHDN & JKR" },
+  { year: "2022", title: "Cradle Fund CIP Sprint", event: "Top 1%" },
 ];
 
 
