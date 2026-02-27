@@ -11,7 +11,8 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const contactInfo = [
   { icon: Mail, label: "Email Us", value: "info@appingtechnology.com", href: "mailto:info@appingtechnology.com" },
-  { icon: Phone, label: "Call Us", value: "+1 (234) 567-890", href: "tel:+1234567890" },
+  { icon: Phone, label: "Malaysia", value: "+60 11-3767 2381", href: "tel:+601137672381" },
+  { icon: Phone, label: "Hong Kong", value: "+852 9818 6843", href: "tel:+85298186843" },
 ];
 
 const Contact = () => {
