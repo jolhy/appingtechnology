@@ -11,6 +11,7 @@ import talentHelpdeskBg from "@/assets/talent-helpdesk-bg.jpg";
 import talentAccountingBg from "@/assets/talent-accounting-bg.jpg";
 import talentHrBg from "@/assets/talent-hr-bg.jpg";
 import talentSalesBg from "@/assets/talent-sales-bg.jpg";
+import bpoBg from "@/assets/bpo-bg.jpg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./motion/ScrollReveal";
@@ -58,15 +59,18 @@ const ServicesSection = () => {
       <div className="container relative z-10">
         {/* BPO Introduction */}
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em] mb-3">What We Do</p>
-            <h2 className="text-4xl md:text-5xl text-foreground mb-4">
-              Business Process<br />
-              <span className="italic text-primary/80">Outsourcing (BPO)</span>
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Business Process Outsourcing (BPO) allows companies to delegate non-core functions to specialized providers, reducing costs and freeing up resources to focus on core business activities. Apping Tech provides comprehensive BPO services, from customer support and HR management to back-office operations and technical support. By partnering with us, businesses can achieve higher efficiency, lower overheads, and improved service quality, allowing them to stay competitive in a fast-paced market.
-            </p>
+          <div className="relative max-w-3xl mx-auto text-center mb-12 rounded-2xl overflow-hidden bg-cover bg-center p-10 md:p-14" style={{ backgroundImage: `url(${bpoBg})` }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(235,70%,30%)]/90 via-[hsl(235,60%,20%)]/85 to-[hsl(25,85%,25%)]/80 rounded-2xl" />
+            <div className="relative z-10">
+              <p className="text-orange-300 font-semibold text-sm uppercase tracking-[0.2em] mb-3">What We Do</p>
+              <h2 className="text-4xl md:text-5xl text-white mb-4">
+                Business Process<br />
+                <span className="italic text-orange-300">Outsourcing (BPO)</span>
+              </h2>
+              <p className="text-white/80 text-lg leading-relaxed">
+                Business Process Outsourcing (BPO) allows companies to delegate non-core functions to specialized providers, reducing costs and freeing up resources to focus on core business activities. Apping Tech provides comprehensive BPO services, from customer support and HR management to back-office operations and technical support. By partnering with us, businesses can achieve higher efficiency, lower overheads, and improved service quality, allowing them to stay competitive in a fast-paced market.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
 
