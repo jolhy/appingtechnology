@@ -10,6 +10,7 @@ import talentOperationsBg from "@/assets/talent-operations-bg.jpg";
 import talentHelpdeskBg from "@/assets/talent-helpdesk-bg.jpg";
 import talentAccountingBg from "@/assets/talent-accounting-bg.jpg";
 import talentHrBg from "@/assets/talent-hr-bg.jpg";
+import talentSalesBg from "@/assets/talent-sales-bg.jpg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./motion/ScrollReveal";
@@ -158,8 +159,9 @@ const ServicesSection = () => {
                   const isHelpdesk = service.title === "Helpdesk & Support";
                   const isAccounting = service.title === "Accounting & Finance";
                   const isHrTeam = service.title === "HR & Recruitment";
-                  const hasTalentBg = isMarketingTeam || isOpsTeam || isHelpdesk || isAccounting || isHrTeam;
-                  const talentBgImage = isMarketingTeam ? talentMarketingBg : isOpsTeam ? talentOperationsBg : isHelpdesk ? talentHelpdeskBg : isAccounting ? talentAccountingBg : isHrTeam ? talentHrBg : undefined;
+                  const isSalesTeam = service.title === "Sales Representatives";
+                  const hasTalentBg = isMarketingTeam || isOpsTeam || isHelpdesk || isAccounting || isHrTeam || isSalesTeam;
+                  const talentBgImage = isMarketingTeam ? talentMarketingBg : isOpsTeam ? talentOperationsBg : isHelpdesk ? talentHelpdeskBg : isAccounting ? talentAccountingBg : isHrTeam ? talentHrBg : isSalesTeam ? talentSalesBg : undefined;
                   return (
                     <motion.div
                       className={`group relative p-8 rounded-2xl border border-border/60 hover:border-primary/20 transition-all duration-300 h-full overflow-hidden ${hasTalentBg ? "bg-cover bg-center" : "bg-card"}`}
@@ -172,6 +174,7 @@ const ServicesSection = () => {
                       {isHelpdesk && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(225,50%,28%)]/85 via-[hsl(230,45%,22%)]/80 to-[hsl(25,60%,22%)]/75 rounded-2xl" />}
                       {isAccounting && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(20,75%,25%)]/85 via-[hsl(15,65%,18%)]/80 to-[hsl(235,40%,18%)]/80 rounded-2xl" />}
                       {isHrTeam && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(235,55%,25%)]/85 via-[hsl(260,40%,20%)]/80 to-[hsl(25,70%,22%)]/75 rounded-2xl" />}
+                      {isSalesTeam && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,85%,30%)]/85 via-[hsl(20,70%,22%)]/80 to-[hsl(235,50%,18%)]/80 rounded-2xl" />}
                       <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/[0.04] to-transparent rounded-bl-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className={`relative z-10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors ${hasTalentBg ? "bg-white/20" : "bg-primary/10 group-hover:bg-primary/15"}`}>
                         <service.icon size={24} className={hasTalentBg ? "text-white" : "text-primary"} />
