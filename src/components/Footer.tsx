@@ -85,8 +85,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/40 text-sm">© {currentYear} Apping Technology. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="text-background/40 hover:text-background text-sm transition-colors">Privacy</a>
-            <a href="#" className="text-background/40 hover:text-background text-sm transition-colors">Terms</a>
+            <Link to="/legal" className="text-background/40 hover:text-background text-sm transition-colors">Legal</Link>
           </div>
         </div>
       </div>
