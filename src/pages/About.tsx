@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import appingLogo from "@/assets/apping-logo.png";
+import aboutBg from "@/assets/about-bg.jpg";
 import augustWong from "@/assets/august-wong.jpg";
 import joLee from "@/assets/jo-lee.jpg";
 import ScrollReveal from "@/components/motion/ScrollReveal";
@@ -108,15 +109,15 @@ const About = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-8 md:py-12 bg-background relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[100px] -translate-y-1/3" />
-          <div className="container relative">
+        <section className="py-8 md:py-12 relative overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url(${aboutBg})` }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(235,70%,30%)]/90 via-[hsl(235,60%,20%)]/85 to-[hsl(25,85%,25%)]/80" />
+          <div className="container relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <motion.img src={appingLogo} alt="Apping Technology" className="h-16 w-auto mx-auto mb-4" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} />
-              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="text-5xl md:text-6xl text-foreground mb-3">
-                About <span className="text-primary">Apping Technology</span>
+              <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="text-5xl md:text-6xl text-white mb-3">
+                About <span className="text-orange-300">Apping Technology</span>
               </motion.h1>
-              <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-lg md:text-xl text-white/80 leading-relaxed">
                 We help businesses outsource their processes — using AI automation and skilled professionals — so they can focus on what matters most: growing.
               </motion.p>
             </div>
