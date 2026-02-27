@@ -107,12 +107,12 @@ const ServicesSection = () => {
                       whileHover={{ y: -4 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                      {isMarketing && <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-950/75 to-black/80 rounded-2xl" />}
-                      {isOperations && <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-purple-950/75 to-black/80 rounded-2xl" />}
-                      {isSupport && <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 via-teal-950/75 to-black/80 rounded-2xl" />}
-                      {isAccounting && <div className="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-amber-950/75 to-black/80 rounded-2xl" />}
-                      {isHR && <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-emerald-950/75 to-black/80 rounded-2xl" />}
-                      {isSales && <div className="absolute inset-0 bg-gradient-to-br from-rose-900/80 via-rose-950/75 to-black/80 rounded-2xl" />}
+                      {isMarketing && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(235,70%,30%)]/85 via-[hsl(235,60%,20%)]/80 to-[hsl(25,85%,25%)]/75 rounded-2xl" />}
+                      {isOperations && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,80%,28%)]/85 via-[hsl(25,70%,20%)]/80 to-[hsl(225,30%,15%)]/80 rounded-2xl" />}
+                      {isSupport && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(225,50%,28%)]/85 via-[hsl(230,45%,22%)]/80 to-[hsl(25,60%,22%)]/75 rounded-2xl" />}
+                      {isAccounting && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(20,75%,25%)]/85 via-[hsl(15,65%,18%)]/80 to-[hsl(235,40%,18%)]/80 rounded-2xl" />}
+                      {isHR && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(235,55%,25%)]/85 via-[hsl(260,40%,20%)]/80 to-[hsl(25,70%,22%)]/75 rounded-2xl" />}
+                      {isSales && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,85%,30%)]/85 via-[hsl(20,70%,22%)]/80 to-[hsl(235,50%,18%)]/80 rounded-2xl" />}
                       <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/[0.04] to-transparent rounded-bl-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className={`relative z-10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors ${hasBackground ? "bg-white/20" : "bg-primary/10 group-hover:bg-primary/15"}`}>
                         <service.icon size={24} className={hasBackground ? "text-white" : "text-primary"} />
