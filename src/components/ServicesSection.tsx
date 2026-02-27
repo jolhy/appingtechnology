@@ -1,6 +1,7 @@
 import { Bot, Users, Headphones, BarChart3, Calculator, UserPlus, ShoppingCart, Megaphone, Cog, MessageSquare, Wand2, Rocket, LineChart, ArrowRight } from "lucide-react";
 import aiMarketingBg from "@/assets/ai-marketing-bg.jpg";
 import aiOperationsBg from "@/assets/ai-operations-bg.jpg";
+import aiSupportBg from "@/assets/ai-support-bg.jpg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./motion/ScrollReveal";
@@ -90,8 +91,9 @@ const ServicesSection = () => {
                 {(() => {
                   const isMarketing = service.title === "AI-Powered Marketing";
                   const isOperations = service.title === "AI Operations Automation";
-                  const hasBackground = isMarketing || isOperations;
-                  const bgImage = isMarketing ? aiMarketingBg : isOperations ? aiOperationsBg : undefined;
+                  const isSupport = service.title === "AI Customer Support";
+                  const hasBackground = isMarketing || isOperations || isSupport;
+                  const bgImage = isMarketing ? aiMarketingBg : isOperations ? aiOperationsBg : isSupport ? aiSupportBg : undefined;
                   return (
                     <motion.div
                       className={`group relative p-8 rounded-2xl border border-border/60 hover:border-primary/20 transition-all duration-300 h-full overflow-hidden ${hasBackground ? "bg-cover bg-center" : "bg-card"}`}
@@ -101,6 +103,7 @@ const ServicesSection = () => {
                     >
                       {isMarketing && <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-950/75 to-black/80 rounded-2xl" />}
                       {isOperations && <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-purple-950/75 to-black/80 rounded-2xl" />}
+                      {isSupport && <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 via-teal-950/75 to-black/80 rounded-2xl" />}
                       <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/[0.04] to-transparent rounded-bl-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className={`relative z-10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors ${hasBackground ? "bg-white/20" : "bg-primary/10 group-hover:bg-primary/15"}`}>
                         <service.icon size={24} className={hasBackground ? "text-white" : "text-primary"} />
