@@ -7,6 +7,7 @@ import aiHrBg from "@/assets/ai-hr-bg.jpg";
 import aiSalesBg from "@/assets/ai-sales-bg.jpg";
 import talentMarketingBg from "@/assets/talent-marketing-bg.jpg";
 import talentOperationsBg from "@/assets/talent-operations-bg.jpg";
+import talentHelpdeskBg from "@/assets/talent-helpdesk-bg.jpg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./motion/ScrollReveal";
@@ -152,8 +153,9 @@ const ServicesSection = () => {
                 {(() => {
                   const isMarketingTeam = service.title === "Marketing Teams";
                   const isOpsTeam = service.title === "Operations Specialists";
-                  const hasTalentBg = isMarketingTeam || isOpsTeam;
-                  const talentBgImage = isMarketingTeam ? talentMarketingBg : isOpsTeam ? talentOperationsBg : undefined;
+                  const isHelpdesk = service.title === "Helpdesk & Support";
+                  const hasTalentBg = isMarketingTeam || isOpsTeam || isHelpdesk;
+                  const talentBgImage = isMarketingTeam ? talentMarketingBg : isOpsTeam ? talentOperationsBg : isHelpdesk ? talentHelpdeskBg : undefined;
                   return (
                     <motion.div
                       className={`group relative p-8 rounded-2xl border border-border/60 hover:border-primary/20 transition-all duration-300 h-full overflow-hidden ${hasTalentBg ? "bg-cover bg-center" : "bg-card"}`}
@@ -163,6 +165,7 @@ const ServicesSection = () => {
                     >
                       {isMarketingTeam && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(235,70%,30%)]/85 via-[hsl(235,60%,20%)]/80 to-[hsl(25,85%,25%)]/75 rounded-2xl" />}
                       {isOpsTeam && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,80%,28%)]/85 via-[hsl(25,70%,20%)]/80 to-[hsl(225,30%,15%)]/80 rounded-2xl" />}
+                      {isHelpdesk && <div className="absolute inset-0 bg-gradient-to-br from-[hsl(225,50%,28%)]/85 via-[hsl(230,45%,22%)]/80 to-[hsl(25,60%,22%)]/75 rounded-2xl" />}
                       <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/[0.04] to-transparent rounded-bl-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className={`relative z-10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors ${hasTalentBg ? "bg-white/20" : "bg-primary/10 group-hover:bg-primary/15"}`}>
                         <service.icon size={24} className={hasTalentBg ? "text-white" : "text-primary"} />
