@@ -85,6 +85,10 @@ const SuccessSection = () => {
                   src={teamPhoto}
                   alt="The Apping Technology team"
                   className="w-full h-auto object-cover"
+                  width={1920}
+                  height={1080}
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
 

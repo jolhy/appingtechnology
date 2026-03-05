@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2.5 mb-6">
-              <img src={appingLogo} alt="Apping Technology" className="h-9 w-auto brightness-0 invert" />
+              <img src={appingLogo} alt="Apping Technology" className="h-9 w-auto brightness-0 invert" width={36} height={36} loading="lazy" decoding="async" />
               <span className="font-serif text-xl text-background">Apping Technology</span>
             </Link>
             <p className="text-background/60 mb-6 max-w-sm leading-relaxed text-[15px]">
