@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, Copy, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import { toast } from "sonner";
 
 const contactInfo = [
   { icon: Mail, label: "Email Us", value: "info@appingtechnology.com", href: "mailto:info@appingtechnology.com" },
@@ -11,6 +12,11 @@ const contactInfo = [
 ];
 
 const Contact = () => {
+  const handleCopy = (e: React.MouseEvent, value: string) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(value);
+    toast.success("Copied to clipboard!");
+  };
 
   return (
     <div className="min-h-screen">
@@ -39,24 +45,32 @@ const Contact = () => {
 
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
-                  <motion.a
+                  <motion.div
                     key={item.label}
-                    href={item.href}
-                    className="flex items-start gap-4 p-5 rounded-xl bg-background border border-border/60 block transition-colors hover:border-primary/20"
+                    className="flex items-center gap-4 p-5 rounded-xl bg-background border border-border/60 transition-colors hover:border-primary/20"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.08 }}
                     whileHover={{ y: -2 }}
                   >
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon size={20} className="text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground text-sm mb-0.5">{item.label}</p>
-                      <p className="text-muted-foreground text-sm">{item.value}</p>
-                    </div>
-                  </motion.a>
+                    <a href={item.href} className="flex items-center gap-4 flex-1 min-w-0">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon size={20} className="text-primary" />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="font-semibold text-foreground text-sm mb-0.5">{item.label}</p>
+                        <p className="text-muted-foreground text-sm truncate">{item.value}</p>
+                      </div>
+                    </a>
+                    <button
+                      onClick={(e) => handleCopy(e, item.value)}
+                      className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors flex-shrink-0"
+                      aria-label={`Copy ${item.value}`}
+                    >
+                      <Copy size={16} />
+                    </button>
+                  </motion.div>
                 ))}
               </div>
               <div className="mt-8 pt-8 border-t border-border/60">
