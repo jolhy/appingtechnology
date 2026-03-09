@@ -1,16 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import appingLogo from "@/assets/apping-logo.png";
 
+const serviceSubLinks = [
+  { label: "Business Process Outsourcing", href: "/services" },
+  { label: "HK Technology Voucher Programme", href: "/technology-voucher" },
+  { label: "Professional Training", href: "/professional-training" },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
+    { label: "Services", href: "/services", hasDropdown: true },
     { label: "About", href: "/about" },
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
@@ -20,6 +27,10 @@ const Header = () => {
     if (href === "/") return location.pathname === "/";
     return location.pathname.startsWith(href);
   };
+
+  const isServicesActive = ["/services", "/technology-voucher", "/professional-training"].some(
+    (p) => location.pathname.startsWith(p)
+  );
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background via-background/80 to-transparent" style={{ paddingBottom: '1rem' }}>
@@ -31,19 +42,60 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-6">
           <nav className="flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.href}
-                className={`transition-colors duration-200 text-[15px] font-medium ${
-                  isActive(link.href)
-                    ? "text-primary"
-                    : "text-foreground/70 hover:text-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.hasDropdown ? (
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <Link
+                    to={link.href}
+                    className={`inline-flex items-center gap-1 transition-colors duration-200 text-[15px] font-medium ${
+                      isServicesActive
+                        ? "text-primary"
+                        : "text-foreground/70 hover:text-foreground"
+                    }`}
+                  >
+                    {link.label}
+                    <ChevronDown size={14} className={`transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
+                  </Link>
+
+                  {isServicesOpen && (
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+                      <div className="bg-card border border-border/60 rounded-xl shadow-lg py-2 min-w-[280px]">
+                        {serviceSubLinks.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            to={sub.href}
+                            className={`block px-5 py-2.5 text-sm transition-colors ${
+                              location.pathname === sub.href
+                                ? "text-primary bg-primary/5"
+                                : "text-foreground/80 hover:text-foreground hover:bg-muted/50"
+                            }`}
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className={`transition-colors duration-200 text-[15px] font-medium ${
+                    isActive(link.href)
+                      ? "text-primary"
+                      : "text-foreground/70 hover:text-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           <Button variant="default" size="default" asChild className="rounded-full px-6">
@@ -63,18 +115,50 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-medium animate-fade-in">
           <nav className="container py-6 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.href}
-                className={`transition-colors duration-200 text-base font-medium py-2 ${
-                  isActive(link.href) ? "text-primary" : "text-foreground hover:text-primary"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.hasDropdown ? (
+                <div key={link.label}>
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className={`flex items-center gap-1 transition-colors duration-200 text-base font-medium py-2 w-full text-left ${
+                      isServicesActive ? "text-primary" : "text-foreground hover:text-primary"
+                    }`}
+                  >
+                    {link.label}
+                    <ChevronDown size={14} className={`transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
+                  </button>
+                  {isServicesOpen && (
+                    <div className="ml-4 flex flex-col gap-2 mt-1">
+                      {serviceSubLinks.map((sub) => (
+                        <Link
+                          key={sub.href}
+                          to={sub.href}
+                          className={`text-sm py-1.5 transition-colors ${
+                            location.pathname === sub.href
+                              ? "text-primary"
+                              : "text-muted-foreground hover:text-foreground"
+                          }`}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className={`transition-colors duration-200 text-base font-medium py-2 ${
+                    isActive(link.href) ? "text-primary" : "text-foreground hover:text-primary"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <Button variant="default" size="lg" className="mt-4 rounded-full" asChild>
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                 Get A Demo
