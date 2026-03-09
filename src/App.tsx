@@ -11,6 +11,8 @@ import Careers from "./pages/Careers";
 import AIMarketing from "./pages/AIMarketing";
 import Contact from "./pages/Contact";
 import Legal from "./pages/Legal";
+import TechnologyVoucher from "./pages/TechnologyVoucher";
+import ProfessionalTraining from "./pages/ProfessionalTraining";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
