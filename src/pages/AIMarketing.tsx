@@ -6,6 +6,7 @@ import { ArrowRight, TrendingUp, Eye, Users, BarChart3, Check, Play } from "luci
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import heroImg from "@/assets/ai-marketing/hero.jpg";
 import caseFashion from "@/assets/ai-marketing/case-fashion.jpg";
