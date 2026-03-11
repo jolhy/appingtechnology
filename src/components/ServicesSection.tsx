@@ -91,7 +91,7 @@ const ServicesSection = () => {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                 <Bot size={22} className="text-primary" />
               </div>
-              <h3 className="text-2xl md:text-3xl text-foreground">AI Automation</h3>
+              <h3 className="text-2xl md:text-3xl text-foreground">AI Marketing & Automation Services</h3>
             </div>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
