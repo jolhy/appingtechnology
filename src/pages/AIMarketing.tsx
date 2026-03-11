@@ -129,7 +129,7 @@ const AIMarketing = () => {
                 <ScrollReveal key={study.title} delay={i * 0.1}>
                   <div className="bg-background rounded-2xl border border-border/60 overflow-hidden h-full">
                     <div className="aspect-video overflow-hidden">
-                      <img src={study.image} alt={study.title} className="w-full h-full object-cover" />
+                      <img src={study.image} alt={`${study.title} - AI marketing case study results by Apping Technology`} className="w-full h-full object-cover" loading="lazy" />
                     </div>
                     <div className="p-6 md:p-8">
                       <span className="text-primary text-xs font-semibold uppercase tracking-wider">{study.label}</span>
