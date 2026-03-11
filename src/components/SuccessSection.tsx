@@ -23,7 +23,7 @@ const awards = [
 
 const SuccessSection = () => {
   return (
-    <section id="success" className="py-14 md:py-20 bg-card relative overflow-hidden grain-overlay">
+    <section id="success" aria-label="Client success stories" className="py-14 md:py-20 bg-card relative overflow-hidden grain-overlay">
       {/* Decorative elements */}
       <OrganicShape
         className="w-[350px] h-[350px] -bottom-24 -right-24 bg-primary/[0.03]"
@@ -35,7 +35,7 @@ const SuccessSection = () => {
           <div className="text-center max-w-2xl mx-auto mb-10">
             <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em] mb-3">Client Success</p>
             <h2 className="text-4xl md:text-5xl text-foreground mb-4">
-              Trusted by <span className="italic">growing</span> businesses
+              Trusted by <span className="italic">Growing</span> Businesses Across APAC
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">See how companies outsource smarter with Apping Technology.</p>
           </div>

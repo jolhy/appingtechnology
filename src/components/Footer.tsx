@@ -25,7 +25,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-foreground text-background/80">
+    <footer className="bg-foreground text-background/80" role="contentinfo">
       <div className="container py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
           <div className="lg:col-span-2">

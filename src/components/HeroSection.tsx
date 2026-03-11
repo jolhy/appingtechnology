@@ -15,7 +15,7 @@ const benefits = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden grain-overlay">
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden grain-overlay">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -59,9 +59,9 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6"
           >
-            Outsource smarter
+            AI Marketing, AI Automation and
             <br />
-            <span className="text-primary italic">with AI & talent</span>
+            <span className="text-primary italic">Business Outsourcing Solutions</span>
           </motion.h1>
 
           <motion.p
@@ -70,7 +70,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-lg mb-8 leading-relaxed"
           >
-            Apping Technology helps businesses outsource their processes — through AI automation or skilled professionals. Marketing, operations, helpdesk, accounting, HR, sales, and more.
+            Helping businesses scale marketing, operations and growth using modern <strong>AI marketing</strong> tools, <strong>AI automation</strong>, and skilled professionals across APAC.
           </motion.p>
 
           <motion.div
