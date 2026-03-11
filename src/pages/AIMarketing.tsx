@@ -104,8 +104,8 @@ const AIMarketing = () => {
               </div>
               <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2, duration: 0.6 }} className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  <img src={heroImg} alt="AI-powered marketing content creation" className="w-full h-auto" />
-                </div>
+                   <img src={heroImg} alt="AI-powered marketing content creation with AI avatar spokesperson for social media" className="w-full h-full object-cover" loading="eager" />
+                 </div>
               </motion.div>
             </div>
           </div>
