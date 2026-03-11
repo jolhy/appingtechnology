@@ -4,6 +4,8 @@ import { Mail, Phone, Copy, Facebook, Linkedin, Instagram, Youtube } from "lucid
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
+import { Link } from "react-router-dom";
 
 const contactInfo = [
   { icon: Mail, label: "Email Us", value: "info@appingtechnology.com", href: "mailto:info@appingtechnology.com" },
@@ -20,6 +22,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact Apping Technology | Get a Free Consultation"
+        description="Contact Apping Technology for business process outsourcing, AI automation, and talent outsourcing solutions. Offices in Malaysia and Hong Kong. Book a free consultation today."
+        keywords="contact Apping Technology, BPO consultation, outsourcing quote, AI automation consultation, Malaysia outsourcing, Hong Kong outsourcing"
+        canonical="/contact"
+      />
       <Header />
       <main className="pt-20">
         <section className="py-14 md:py-20 bg-background relative overflow-hidden">
@@ -31,7 +39,7 @@ const Contact = () => {
                 Let's <span className="text-primary">outsource smarter</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Tell us about your business processes and we'll show you how AI and talent can help.
+                Tell us about your business processes and we'll show you how <strong className="text-foreground">AI automation</strong> and skilled talent can help you reduce costs and scale operations.
               </motion.p>
             </div>
           </div>
@@ -41,7 +49,7 @@ const Contact = () => {
           <div className="container max-w-xl">
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl text-foreground mb-2">Get in touch</h2>
-              <p className="text-muted-foreground mb-8">Reach out directly — we're happy to help.</p>
+              <p className="text-muted-foreground mb-8">Reach out directly — we're happy to help with any outsourcing enquiry.</p>
 
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
@@ -86,6 +94,28 @@ const Contact = () => {
                       <social.icon size={18} />
                     </a>
                   ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* SEO Content */}
+        <section className="py-14 md:py-20 bg-background">
+          <div className="container">
+            <ScrollReveal>
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl text-foreground mb-6 text-center">Work With a Trusted <span className="italic text-primary/80">Outsourcing Partner</span></h2>
+                <div className="space-y-4 text-muted-foreground text-[17px] leading-relaxed">
+                  <p>
+                    Apping Technology has offices in <strong className="text-foreground">Malaysia and Hong Kong</strong>, serving businesses across the Asia-Pacific region. Whether you're looking to outsource a single department or transform your entire operations with AI, we provide dedicated support from initial consultation to full deployment.
+                  </p>
+                  <p>
+                    Our team specialises in <strong className="text-foreground">business process outsourcing</strong>, AI automation, and talent deployment. We help companies of all sizes reduce overheads, improve efficiency, and gain a competitive edge through smarter outsourcing strategies.
+                  </p>
+                  <p>
+                    Explore our <Link to="/services" className="text-primary hover:underline font-medium">full range of outsourcing services</Link>, learn more <Link to="/about" className="text-primary hover:underline font-medium">about our company</Link>, or browse our <Link to="/careers" className="text-primary hover:underline font-medium">open positions</Link> if you'd like to join our team.
+                  </p>
                 </div>
               </div>
             </ScrollReveal>
