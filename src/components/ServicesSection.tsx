@@ -77,8 +77,8 @@ const ServicesSection = () => {
           <div className="text-center max-w-2xl mx-auto mb-10 mt-6">
             <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em] mb-3">Our Services</p>
             <h2 className="text-4xl md:text-5xl text-foreground mb-4">
-              Two ways to outsource<br />
-              <span className="italic text-primary/80">your processes</span>
+              Our AI Services &<br />
+              <span className="italic text-primary/80">Talent Outsourcing</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">Whether you need AI automation or skilled professionals, Apping Technology has you covered.</p>
           </div>
