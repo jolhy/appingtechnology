@@ -124,7 +124,7 @@ const About = () => {
                 About <span className="text-orange-300">Apping Technology</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-lg md:text-xl text-white/80 leading-relaxed">
-                We help businesses outsource their processes — using AI automation and skilled professionals — so they can focus on what matters most: growing.
+                We help businesses outsource their processes — using <strong className="text-white">AI automation</strong> and skilled professionals — so they can focus on what matters most: growing.
               </motion.p>
             </div>
           </div>
