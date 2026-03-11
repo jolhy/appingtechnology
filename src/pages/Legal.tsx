@@ -6,6 +6,12 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 const Legal = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Privacy Policy & EULA | Apping Technology"
+        description="Read Apping Technology's privacy policy and end user licence agreement (EULA). Learn how we collect, use, and protect your personal data."
+        keywords="privacy policy, EULA, Apping Technology legal, data protection, terms of service"
+        canonical="/legal"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

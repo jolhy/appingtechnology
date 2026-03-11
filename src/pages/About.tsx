@@ -222,6 +222,9 @@ const About = () => {
                     <Link to="/careers">Join Our Team</Link>
                   </Button>
                 </div>
+                <p className="text-muted-foreground text-sm mt-6">
+                  Explore our <Link to="/services" className="text-primary hover:underline font-medium">outsourcing services</Link> · <Link to="/ai-marketing" className="text-primary hover:underline font-medium">AI marketing</Link> · <Link to="/professional-training" className="text-primary hover:underline font-medium">professional training</Link>
+                </p>
               </div>
             </ScrollReveal>
           </div>

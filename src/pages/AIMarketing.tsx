@@ -267,6 +267,31 @@ const AIMarketing = () => {
           </div>
         </section>
 
+        {/* SEO Content */}
+        <section className="py-14 md:py-20 bg-card">
+          <div className="container">
+            <ScrollReveal>
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl text-foreground mb-6 text-center">Why <span className="italic text-primary/80">AI Marketing</span> Works for Businesses</h2>
+                <div className="space-y-4 text-muted-foreground text-[17px] leading-relaxed">
+                  <p>
+                    <strong className="text-foreground">AI marketing</strong> is transforming how businesses create and distribute content. Traditional marketing requires constant filming, editing, and scheduling — but with an AI brand spokesperson, your brand stays visible on social media without the ongoing production burden.
+                  </p>
+                  <p>
+                    Our <strong className="text-foreground">AI avatar video content</strong> uses advanced generative AI to create professional, branded videos that feel authentic and build audience familiarity over time. The result is stronger brand recall, increased profile visits, and higher engagement — all without a single filming session.
+                  </p>
+                  <p>
+                    Whether you're in fashion, education, healthcare, or professional services, <strong className="text-foreground">AI content creation</strong> helps you maintain a consistent online presence that drives awareness and conversions. Our clients see measurable growth in reach, views, and website traffic within the first few months.
+                  </p>
+                  <p>
+                    Explore our <Link to="/services" className="text-primary hover:underline font-medium">full range of BPO services</Link>, learn about our <Link to="/professional-training" className="text-primary hover:underline font-medium">AI training programmes</Link>, or <Link to="/contact" className="text-primary hover:underline font-medium">contact us</Link> to get started with AI-powered marketing today.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         <CTASection />
       </main>
       <Footer />
