@@ -88,7 +88,7 @@ const AIMarketing = () => {
               <div>
                 <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">AI-Powered Marketing</motion.p>
                 <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-5 leading-tight">
-                  Stay Visible Online with an <span className="italic text-primary/80">AI Brand Spokesperson</span>
+                  AI-Powered Marketing with an <span className="italic text-primary/80">AI Brand Spokesperson</span>
                 </motion.h1>
                 <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg text-muted-foreground leading-relaxed mb-8">
                   An AI avatar that works tirelessly — creating consistent, branded video content so you stay top of mind without filming a single thing.
