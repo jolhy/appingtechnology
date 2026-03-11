@@ -23,7 +23,7 @@ const awards = [
 
 const SuccessSection = () => {
   return (
-    <section id="success" className="py-14 md:py-20 bg-card relative overflow-hidden grain-overlay">
+    <section id="success" aria-label="Client success stories" className="py-14 md:py-20 bg-card relative overflow-hidden grain-overlay">
       {/* Decorative elements */}
       <OrganicShape
         className="w-[350px] h-[350px] -bottom-24 -right-24 bg-primary/[0.03]"
