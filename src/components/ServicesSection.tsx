@@ -147,7 +147,7 @@ const ServicesSection = () => {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                 <Users size={22} className="text-primary" />
               </div>
-              <h3 className="text-2xl md:text-3xl text-foreground">Talent Outsourcing</h3>
+              <h3 className="text-2xl md:text-3xl text-foreground">Skilled Talent Outsourcing</h3>
             </div>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
