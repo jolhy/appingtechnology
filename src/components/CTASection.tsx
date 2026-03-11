@@ -24,7 +24,7 @@ const CTASection = () => {
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Ready to outsource <span className="italic text-primary">smarter?</span>
+              Start Your <span className="italic text-primary">AI Transformation</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
               Book a free consultation and discover how AI automation and skilled talent can transform your operations.
