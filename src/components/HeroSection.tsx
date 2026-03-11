@@ -70,7 +70,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-lg mb-8 leading-relaxed"
           >
-            Apping Technology helps businesses outsource their processes — through AI automation or skilled professionals. Marketing, operations, helpdesk, accounting, HR, sales, and more.
+            Helping businesses scale marketing, operations and growth using modern <strong>AI marketing</strong> tools, <strong>AI automation</strong>, and skilled professionals across APAC.
           </motion.p>
 
           <motion.div

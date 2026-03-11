@@ -199,7 +199,7 @@ const ServicesSection = () => {
             <div className="text-center max-w-2xl mx-auto mb-10">
               <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em] mb-4">How It Works</p>
               <h2 className="text-4xl md:text-5xl text-foreground mb-5">
-                Simple, transparent, <span className="italic">effective</span>
+                How AI Outsourcing <span className="italic">Works</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">Getting started with Apping Technology is easy.</p>
             </div>

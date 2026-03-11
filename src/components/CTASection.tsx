@@ -27,7 +27,7 @@ const CTASection = () => {
               Start Your <span className="italic text-primary">AI Transformation</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-              Book a free consultation and discover how AI automation and skilled talent can transform your operations.
+              Book a free consultation and discover how <strong>AI marketing</strong>, <strong>AI automation</strong>, and skilled talent can transform your business operations.
             </p>
           </ScrollReveal>
 

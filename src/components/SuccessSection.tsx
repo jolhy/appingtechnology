@@ -35,7 +35,7 @@ const SuccessSection = () => {
           <div className="text-center max-w-2xl mx-auto mb-10">
             <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em] mb-3">Client Success</p>
             <h2 className="text-4xl md:text-5xl text-foreground mb-4">
-              Trusted by <span className="italic">growing</span> businesses
+              Trusted by <span className="italic">Growing</span> Businesses Across APAC
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">See how companies outsource smarter with Apping Technology.</p>
           </div>
