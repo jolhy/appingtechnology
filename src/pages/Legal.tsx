@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import SEO from "@/components/SEO";
 
 const Legal = () => {
   return (

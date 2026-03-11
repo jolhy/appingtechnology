@@ -10,6 +10,7 @@ import aboutBg from "@/assets/about-bg.jpg";
 import augustWong from "@/assets/august-wong.jpg";
 import joLee from "@/assets/jo-lee.jpg";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import SEO from "@/components/SEO";
 
 const values = [
   { icon: Target, title: "Results-Driven", description: "Every solution is designed to deliver measurable operational improvements." },
