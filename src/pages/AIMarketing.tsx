@@ -174,7 +174,7 @@ const AIMarketing = () => {
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <div className="rounded-2xl overflow-hidden border border-border/60">
-                  <img src={brandMemory} alt="Brand memory through consistent AI content" className="w-full h-auto" />
+                  <img src={brandMemory} alt="Brand memory built through consistent AI avatar content marketing" className="w-full h-auto" loading="lazy" />
                 </div>
               </ScrollReveal>
             </div>
