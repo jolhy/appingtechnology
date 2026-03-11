@@ -10,6 +10,7 @@ import aboutBg from "@/assets/about-bg.jpg";
 import augustWong from "@/assets/august-wong.jpg";
 import joLee from "@/assets/jo-lee.jpg";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import SEO from "@/components/SEO";
 
 const values = [
   { icon: Target, title: "Results-Driven", description: "Every solution is designed to deliver measurable operational improvements." },
@@ -106,6 +107,12 @@ const TeamCarousel = () => {
 const About = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About Apping Technology | AI & Talent Outsourcing Company"
+        description="Apping Technology is an award-winning business process outsourcing company combining AI automation with skilled professionals. Serving 300+ clients across Malaysia, Hong Kong, and APAC."
+        keywords="about Apping Technology, outsourcing company, AI automation company, BPO company Malaysia, Hong Kong outsourcing, APAC technology company"
+        canonical="/about"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}
@@ -118,7 +125,7 @@ const About = () => {
                 About <span className="text-orange-300">Apping Technology</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-lg md:text-xl text-white/80 leading-relaxed">
-                We help businesses outsource their processes — using AI automation and skilled professionals — so they can focus on what matters most: growing.
+                We help businesses outsource their processes — using <strong className="text-white">AI automation</strong> and skilled professionals — so they can focus on what matters most: growing.
               </motion.p>
             </div>
           </div>
@@ -216,6 +223,9 @@ const About = () => {
                     <Link to="/careers">Join Our Team</Link>
                   </Button>
                 </div>
+                <p className="text-muted-foreground text-sm mt-6">
+                  Explore our <Link to="/services" className="text-primary hover:underline font-medium">outsourcing services</Link> · <Link to="/ai-marketing" className="text-primary hover:underline font-medium">AI marketing</Link> · <Link to="/professional-training" className="text-primary hover:underline font-medium">professional training</Link>
+                </p>
               </div>
             </ScrollReveal>
           </div>

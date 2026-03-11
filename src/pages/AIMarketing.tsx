@@ -6,6 +6,7 @@ import { ArrowRight, TrendingUp, Eye, Users, BarChart3, Check, Play } from "luci
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 import heroImg from "@/assets/ai-marketing/hero.jpg";
 import caseFashion from "@/assets/ai-marketing/case-fashion.jpg";
@@ -71,6 +72,12 @@ const plans = [
 const AIMarketing = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="AI-Powered Marketing Services | AI Brand Spokesperson | Apping Technology"
+        description="Stay visible online with an AI brand spokesperson. Apping Technology creates consistent AI avatar video content for social media marketing, brand awareness, and lead generation."
+        keywords="AI marketing, AI brand spokesperson, AI avatar video, AI content creation, social media AI, AI marketing services, digital marketing AI, AI video marketing"
+        canonical="/ai-marketing"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}
@@ -81,7 +88,7 @@ const AIMarketing = () => {
               <div>
                 <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">AI-Powered Marketing</motion.p>
                 <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-5 leading-tight">
-                  Stay Visible Online with an <span className="italic text-primary/80">AI Brand Spokesperson</span>
+                  AI-Powered Marketing with an <span className="italic text-primary/80">AI Brand Spokesperson</span>
                 </motion.h1>
                 <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg text-muted-foreground leading-relaxed mb-8">
                   An AI avatar that works tirelessly — creating consistent, branded video content so you stay top of mind without filming a single thing.
@@ -97,8 +104,8 @@ const AIMarketing = () => {
               </div>
               <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2, duration: 0.6 }} className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  <img src={heroImg} alt="AI-powered marketing content creation" className="w-full h-auto" />
-                </div>
+                   <img src={heroImg} alt="AI-powered marketing content creation with AI avatar spokesperson for social media" className="w-full h-full object-cover" loading="eager" />
+                 </div>
               </motion.div>
             </div>
           </div>
@@ -122,7 +129,7 @@ const AIMarketing = () => {
                 <ScrollReveal key={study.title} delay={i * 0.1}>
                   <div className="bg-background rounded-2xl border border-border/60 overflow-hidden h-full">
                     <div className="aspect-video overflow-hidden">
-                      <img src={study.image} alt={study.title} className="w-full h-full object-cover" />
+                      <img src={study.image} alt={`${study.title} - AI marketing case study results by Apping Technology`} className="w-full h-full object-cover" loading="lazy" />
                     </div>
                     <div className="p-6 md:p-8">
                       <span className="text-primary text-xs font-semibold uppercase tracking-wider">{study.label}</span>
@@ -167,7 +174,7 @@ const AIMarketing = () => {
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <div className="rounded-2xl overflow-hidden border border-border/60">
-                  <img src={brandMemory} alt="Brand memory through consistent AI content" className="w-full h-auto" />
+                  <img src={brandMemory} alt="Brand memory built through consistent AI avatar content marketing" className="w-full h-auto" loading="lazy" />
                 </div>
               </ScrollReveal>
             </div>
@@ -255,6 +262,31 @@ const AIMarketing = () => {
                   <li className="flex items-start gap-2"><Check size={14} className="text-primary mt-0.5 flex-shrink-0" />Monthly performance snapshot</li>
                 </ul>
                 <p className="text-muted-foreground text-xs mt-3 italic">No ad management. No boosted posts. Organic content only.</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* SEO Content */}
+        <section className="py-14 md:py-20 bg-card">
+          <div className="container">
+            <ScrollReveal>
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl text-foreground mb-6 text-center">Why <span className="italic text-primary/80">AI Marketing</span> Works for Businesses</h2>
+                <div className="space-y-4 text-muted-foreground text-[17px] leading-relaxed">
+                  <p>
+                    <strong className="text-foreground">AI marketing</strong> is transforming how businesses create and distribute content. Traditional marketing requires constant filming, editing, and scheduling — but with an AI brand spokesperson, your brand stays visible on social media without the ongoing production burden.
+                  </p>
+                  <p>
+                    Our <strong className="text-foreground">AI avatar video content</strong> uses advanced generative AI to create professional, branded videos that feel authentic and build audience familiarity over time. The result is stronger brand recall, increased profile visits, and higher engagement — all without a single filming session.
+                  </p>
+                  <p>
+                    Whether you're in fashion, education, healthcare, or professional services, <strong className="text-foreground">AI content creation</strong> helps you maintain a consistent online presence that drives awareness and conversions. Our clients see measurable growth in reach, views, and website traffic within the first few months.
+                  </p>
+                  <p>
+                    Explore our <Link to="/services" className="text-primary hover:underline font-medium">full range of BPO services</Link>, learn about our <Link to="/professional-training" className="text-primary hover:underline font-medium">AI training programmes</Link>, or <Link to="/contact" className="text-primary hover:underline font-medium">contact us</Link> to get started with AI-powered marketing today.
+                  </p>
+                </div>
               </div>
             </ScrollReveal>
           </div>

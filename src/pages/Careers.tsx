@@ -5,6 +5,7 @@ import { MapPin, Clock, Briefcase, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import SEO from "@/components/SEO";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
@@ -15,20 +16,26 @@ import cipsprint from "@/assets/careers/cipsprint.png";
 import teamFun from "@/assets/careers/team-fun.jpg";
 
 const carouselImages = [
-  { src: bukaPuasa, alt: "Team buka puasa gathering" },
-  { src: networking, alt: "Networking event" },
-  { src: teamDinner, alt: "Team dinner celebration" },
-  { src: cipsprint, alt: "CIPSprint event" },
-  { src: teamFun, alt: "Team fun moments" },
+  { src: bukaPuasa, alt: "Apping Technology team buka puasa gathering celebrating company culture" },
+  { src: networking, alt: "Apping Technology networking event for business professionals" },
+  { src: teamDinner, alt: "Apping Technology team dinner celebration building team spirit" },
+  { src: cipsprint, alt: "CIPSprint innovation event showcasing technology startups" },
+  { src: teamFun, alt: "Apping Technology team fun moments at the office" },
 ];
 
 const openings = [
-  { title: "Creative Marketing Associate", department: "Marketing", location: "Remote", type: "Full-time", description: "Create compelling marketing campaigns and content that drive brand awareness and engagement." },
+  { title: "Creative Marketing Associate", department: "Marketing", location: "Remote", type: "Full-time", description: "Create compelling marketing campaigns and content that drive brand awareness and engagement using AI tools and creative strategies." },
 ];
 
 const Careers = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Careers at Apping Technology | Join Our Team"
+        description="Join Apping Technology and help businesses outsource smarter with AI and talent. Explore open positions in marketing, operations, AI, and technology across Malaysia and Hong Kong."
+        keywords="careers Apping Technology, jobs AI company, marketing jobs Malaysia, technology careers Hong Kong, BPO careers, AI jobs remote"
+        canonical="/careers"
+      />
       <Header />
       <main className="pt-20">
         <section className="py-14 md:py-20 bg-background relative overflow-hidden">
@@ -40,7 +47,7 @@ const Careers = () => {
                 Join <span className="text-primary">Apping Technology</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-                Help businesses outsource smarter with AI and world-class talent.
+                Help businesses outsource smarter with <strong className="text-foreground">AI automation</strong> and world-class talent. Build your career at one of APAC's fastest-growing BPO and technology companies.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-wrap items-center justify-center gap-4">
                 <Button size="xl" asChild className="rounded-full px-10">
@@ -69,7 +76,7 @@ const Careers = () => {
                     {carouselImages.map((img, i) => (
                       <CarouselItem key={i} className="basis-2/3 md:basis-1/2">
                         <div className="overflow-hidden rounded-2xl aspect-video">
-                          <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                          <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
                         </div>
                       </CarouselItem>
                     ))}
@@ -127,12 +134,34 @@ const Careers = () => {
             <ScrollReveal>
               <div className="max-w-2xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl text-foreground mb-4">Don't see the right role?</h2>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-lg mb-6">
                   Email us at{" "}
                   <a href="mailto:recruitment@appingtechnology.com" className="text-primary hover:underline font-medium">
                     recruitment@appingtechnology.com
                   </a>
                 </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* SEO Content */}
+        <section className="py-14 md:py-20 bg-background">
+          <div className="container">
+            <ScrollReveal>
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl text-foreground mb-6 text-center">Why Work at <span className="italic text-primary/80">Apping Technology</span></h2>
+                <div className="space-y-4 text-muted-foreground text-[17px] leading-relaxed">
+                  <p>
+                    At Apping Technology, we're building the future of <strong className="text-foreground">business process outsourcing</strong> by combining AI automation with human expertise. Our team works on cutting-edge AI projects, serves clients across industries, and enjoys a collaborative, supportive culture that values innovation and growth.
+                  </p>
+                  <p>
+                    We offer remote and flexible working arrangements, professional development opportunities, and the chance to work with leading-edge <strong className="text-foreground">AI tools for business</strong>. Our award-winning team has been recognised at Alibaba Jumpstarter, HK Tech300, and other prestigious competitions across the APAC region.
+                  </p>
+                  <p>
+                    Learn more <Link to="/about" className="text-primary hover:underline font-medium">about our company</Link>, explore our <Link to="/services" className="text-primary hover:underline font-medium">outsourcing services</Link>, or <Link to="/contact" className="text-primary hover:underline font-medium">get in touch</Link> with us directly.
+                  </p>
+                </div>
               </div>
             </ScrollReveal>
           </div>
