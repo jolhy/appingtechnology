@@ -106,6 +106,12 @@ const TeamCarousel = () => {
 const About = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About Apping Technology | AI & Talent Outsourcing Company"
+        description="Apping Technology is an award-winning business process outsourcing company combining AI automation with skilled professionals. Serving 300+ clients across Malaysia, Hong Kong, and APAC."
+        keywords="about Apping Technology, outsourcing company, AI automation company, BPO company Malaysia, Hong Kong outsourcing, APAC technology company"
+        canonical="/about"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}
