@@ -15,7 +15,7 @@ const benefits = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden grain-overlay">
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden grain-overlay">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
