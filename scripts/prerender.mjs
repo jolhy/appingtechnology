@@ -1,7 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { build } from "vite";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -19,19 +18,7 @@ const routes = [
 ];
 
 async function prerender() {
-  console.log("\n📦 Building SSR bundle...");
-
-  await build({
-    configFile: path.resolve(rootDir, "vite.config.ts"),
-    build: {
-      ssr: path.resolve(rootDir, "src/entry-server.tsx"),
-      outDir: path.resolve(rootDir, "dist-ssr"),
-      rollupOptions: { output: { format: "esm" } },
-    },
-    logLevel: "warn",
-  });
-
-  // Dynamically import the rendered entry (use file:// URL for Windows compatibility)
+  // SSR bundle already built by `vite build --ssr` in the build script
   const serverEntry = pathToFileURL(path.resolve(rootDir, "dist-ssr/entry-server.js")).href;
   const { render } = await import(serverEntry);
 
@@ -66,8 +53,13 @@ async function prerender() {
           .join("\n  ");
 
         if (headTags) {
-          // Remove the generic <title> from index.html
+          // Remove all tags that helmet will re-inject to avoid duplicates
           pageHtml = pageHtml.replace(/<title>[^<]*<\/title>/, "");
+          pageHtml = pageHtml.replace(/<meta\s+name="description"[^>]*>/gi, "");
+          pageHtml = pageHtml.replace(/<meta\s+name="keywords"[^>]*>/gi, "");
+          pageHtml = pageHtml.replace(/<link\s+rel="canonical"[^>]*>/gi, "");
+          pageHtml = pageHtml.replace(/<meta\s+property="og:[^"]*"[^>]*>/gi, "");
+          pageHtml = pageHtml.replace(/<meta\s+name="twitter:[^"]*"[^>]*>/gi, "");
           pageHtml = pageHtml.replace("</head>", `  ${headTags}\n</head>`);
         }
       }
