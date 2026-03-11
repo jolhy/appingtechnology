@@ -72,6 +72,12 @@ const plans = [
 const AIMarketing = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="AI-Powered Marketing Services | AI Brand Spokesperson | Apping Technology"
+        description="Stay visible online with an AI brand spokesperson. Apping Technology creates consistent AI avatar video content for social media marketing, brand awareness, and lead generation."
+        keywords="AI marketing, AI brand spokesperson, AI avatar video, AI content creation, social media AI, AI marketing services, digital marketing AI, AI video marketing"
+        canonical="/ai-marketing"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}
