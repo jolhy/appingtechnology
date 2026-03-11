@@ -59,9 +59,9 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6"
           >
-            Outsource smarter
+            AI Marketing, AI Automation and
             <br />
-            <span className="text-primary italic">with AI & talent</span>
+            <span className="text-primary italic">Business Outsourcing Solutions</span>
           </motion.h1>
 
           <motion.p
