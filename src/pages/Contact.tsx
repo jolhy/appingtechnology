@@ -40,6 +40,7 @@ const Contact = () => {
   });
 
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwBrfXKxZxRrcsotAW9BDCuToCPN9LSL_0ZBxATZ-dA5m0i8UoQ7oXLxO-e4Va1nwHd/exec";
+  
 
   const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
     const params = new URLSearchParams({
